@@ -1,6 +1,6 @@
 # Core
 
-[![CI Status](http://img.shields.io/travis/Pedro Piñera Buendía/Core.svg?style=flat)](https://travis-ci.org/Pedro Piñera Buendía/Core)
+[![CI Status](http://img.shields.io/travis/tulapps/Core.svg?style=flat)](https://travis-ci.org/tulapps/Core)
 [![Version](https://img.shields.io/cocoapods/v/Core.svg?style=flat)](http://cocoapods.org/pods/Core)
 [![License](https://img.shields.io/cocoapods/l/Core.svg?style=flat)](http://cocoapods.org/pods/Core)
 
@@ -22,11 +22,27 @@ To install it, simply add the following line to your Podfile:
 
 ```ruby
 pod "Core"
+pod "Core/Networking"
+pod "Core/Persistence"
+```
+
+## Core
+
+### Networking
+
+```swift
+let request = RequestBuilder(baseUrl: "https://api.apps.com").get("/users").withParameters(["param": "value"]).build()
+let client = JsonHttpClient()
+client.request(request).subscribeNext { response in
+  // :tada:
+}
 ```
 
 ## Author
 
 Pedro Piñera Buendía, pepibumur@gmail.com
+Sergi Gracia, sergigram@gmail.com
+Isaac Roldán, isaac.roldan@gmail.com
 
 ## License
 
