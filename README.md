@@ -12,8 +12,13 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-Core is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+Core podspec is part of the [Specs]() repository. In order to be recognized by CocoaPods you have to add that repository to your CocoaPods setup:
+
+```
+pod repo add tulapps https://github.com/tulapps/Specs
+```
+
+To install it, simply add the following line to your Podfile:
 
 ```ruby
 pod "Core"
