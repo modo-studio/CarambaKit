@@ -1,12 +1,8 @@
 use_frameworks!
 
-target 'Core_Example' do
+target 'Core_Tests' do
   pod 'Core', :path => '../'
-
-  target 'Core_Tests' do
-    inherit! :search_paths
-
-    pod 'Quick', '~> 0.8'
+  pod 'Quick', '~> 0.8'
   pod 'Nimble', '~> 3.0'
-  end
+  pod 'Mockingjay'
 end
