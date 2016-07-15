@@ -28,9 +28,9 @@ Set of Core components, including Networking, Persistence, .. that are used in o
     sp.source_files = 'Core/Classes/Networking/**/*'
   end
 
-  s.subspec "Persistence" do |sp|
-    sp.dependency 'Core/Foundation'
-    sp.source_files = 'Core/Classes/Persistence/**/*'
-  end
+  # s.subspec "Persistence" do |sp|
+  #   sp.dependency 'Core/Foundation'
+  #   sp.source_files = 'Core/Classes/Persistence/**/*'
+  # end
 
 end
