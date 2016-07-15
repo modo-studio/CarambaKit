@@ -28,6 +28,7 @@ Set of Core components, including Networking, Persistence, .. that are used in o
 
   s.subspec "Persistence" do |sp|
     sp.dependency 'Core/Foundation'
+    sp.dependency 'keychain-swift' '~> 3.0'
     sp.source_files = 'Core/Classes/Persistence/**/*'
   end
 
