@@ -1,8 +1,6 @@
 # Core
 
 [![CI Status](http://img.shields.io/travis/tulapps/Core.svg?style=flat)](https://travis-ci.org/tulapps/Core)
-[![Version](https://img.shields.io/cocoapods/v/Core.svg?style=flat)](http://cocoapods.org/pods/Core)
-[![License](https://img.shields.io/cocoapods/l/Core.svg?style=flat)](http://cocoapods.org/pods/Core)
 
 ## Example
 
