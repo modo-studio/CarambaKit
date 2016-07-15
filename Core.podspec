@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   GITHUB_USER = "tulapps"
   s.name             = 'Core'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'Core components used for our projects'
   s.description      = <<-DESC
 Set of Core components, including Networking, Persistence, .. that are used in our apps.s
