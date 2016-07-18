@@ -56,9 +56,9 @@ self.observable.rx().subscribeNext { newValue in
 
 ## Author
 
-Pedro Piñera Buendía, pepibumur@gmail.com
-Sergi Gracia, sergigram@gmail.com
-Isaac Roldán, isaac.roldan@gmail.com
+- Pedro Piñera Buendía, pepibumur@gmail.com
+- Sergi Gracia, sergigram@gmail.com
+- Isaac Roldán, isaac.roldan@gmail.com
 
 ## License
 
