@@ -1,5 +1,4 @@
 Pod::Spec.new do |s|
-  GITHUB_USER = "tulapps"
   s.name             = 'Core'
   s.version          = '0.0.2'
   s.summary          = 'Core components used for our projects'
@@ -7,11 +6,10 @@ Pod::Spec.new do |s|
 Set of Core components, including Networking, Persistence, .. that are used in our apps.s
                        DESC
 
-  s.homepage         = "https://github.com/#{GITHUB_USER}/Core"
+  s.homepage         = "https://github.com/tulapps/Core"
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Pedro Piñera' => 'pepibumur@gmail.com', 'Sergi Gracia' => 'sergigram@gmail.com', 'Isaac Roldán' => "isaac.roldan@gmail.com" }
-  s.source           = { :git => "https://github.com/#{GITHUB_USER}/Core.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/tulapps/Core.git", :tag => s.version.to_s }
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.9'
   s.tvos.deployment_target = '9.0'
