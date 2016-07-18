@@ -10,6 +10,7 @@
 		23433B2A1D3646490018405C /* HttpClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23433B291D3646490018405C /* HttpClientSpec.swift */; };
 		23433B2E1D3668A40018405C /* UrlJsonResponseAdapterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23433B2C1D36687A0018405C /* UrlJsonResponseAdapterSpec.swift */; };
 		23433B301D3668CD0018405C /* UrlParameterEncodingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23433B2F1D3668CD0018405C /* UrlParameterEncodingSpec.swift */; };
+		235EBA301D3C9E8E007C215C /* JsonHttpClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235EBA2F1D3C9E8E007C215C /* JsonHttpClientSpec.swift */; };
 		23CCE8C61D366968000DCDFD /* UrlRequestBuilderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCE8C51D366968000DCDFD /* UrlRequestBuilderSpec.swift */; };
 		23CCE8C81D366986000DCDFD /* UrlRequestDispatcherSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCE8C71D366986000DCDFD /* UrlRequestDispatcherSpec.swift */; };
 		23CCE8CA1D366A6C000DCDFD /* UrlRequestTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCE8C91D366A6C000DCDFD /* UrlRequestTypeSpec.swift */; };
@@ -22,6 +23,7 @@
 		23433B291D3646490018405C /* HttpClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClientSpec.swift; sourceTree = "<group>"; };
 		23433B2C1D36687A0018405C /* UrlJsonResponseAdapterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlJsonResponseAdapterSpec.swift; sourceTree = "<group>"; };
 		23433B2F1D3668CD0018405C /* UrlParameterEncodingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlParameterEncodingSpec.swift; sourceTree = "<group>"; };
+		235EBA2F1D3C9E8E007C215C /* JsonHttpClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonHttpClientSpec.swift; sourceTree = "<group>"; };
 		23CCE8C51D366968000DCDFD /* UrlRequestBuilderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlRequestBuilderSpec.swift; sourceTree = "<group>"; };
 		23CCE8C71D366986000DCDFD /* UrlRequestDispatcherSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlRequestDispatcherSpec.swift; sourceTree = "<group>"; };
 		23CCE8C91D366A6C000DCDFD /* UrlRequestTypeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlRequestTypeSpec.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				23CCE8C51D366968000DCDFD /* UrlRequestBuilderSpec.swift */,
 				23CCE8C71D366986000DCDFD /* UrlRequestDispatcherSpec.swift */,
 				23CCE8C91D366A6C000DCDFD /* UrlRequestTypeSpec.swift */,
+				235EBA2F1D3C9E8E007C215C /* JsonHttpClientSpec.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				23CCE8C81D366986000DCDFD /* UrlRequestDispatcherSpec.swift in Sources */,
 				23433B2A1D3646490018405C /* HttpClientSpec.swift in Sources */,
 				23433B301D3668CD0018405C /* UrlParameterEncodingSpec.swift in Sources */,
+				235EBA301D3C9E8E007C215C /* JsonHttpClientSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
