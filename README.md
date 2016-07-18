@@ -36,6 +36,24 @@ client.request(request).subscribeNext { response in
 }
 ```
 
+### Persistence
+
+#### UserDefaultsObservable
+
+`UserDefaultsObservable` allows you to observe changes in the user defauls under a given key.
+
+1. Create an instance of the observable passing the key you're insterented in.
+2. Hold a reference to that observable, otherwise the subscription will be removed.
+3. Get the Rx observable and subscribe to it.
+
+```swift
+self.observable = UserDefaultsObservable(key: "user")
+self.observable.rx().subscribeNext { newValue in
+  print("New value: \(newValue)")
+}
+```
+
+
 ## Author
 
 Pedro Piñera Buendía, pepibumur@gmail.com
