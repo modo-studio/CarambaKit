@@ -7,26 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23433B2A1D3646490018405C /* HttpClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23433B291D3646490018405C /* HttpClientSpec.swift */; };
-		23433B2E1D3668A40018405C /* UrlJsonResponseAdapterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23433B2C1D36687A0018405C /* UrlJsonResponseAdapterSpec.swift */; };
-		23433B301D3668CD0018405C /* UrlParameterEncodingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23433B2F1D3668CD0018405C /* UrlParameterEncodingSpec.swift */; };
-		235EBA301D3C9E8E007C215C /* JsonHttpClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235EBA2F1D3C9E8E007C215C /* JsonHttpClientSpec.swift */; };
-		23CCE8C61D366968000DCDFD /* UrlRequestBuilderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCE8C51D366968000DCDFD /* UrlRequestBuilderSpec.swift */; };
-		23CCE8C81D366986000DCDFD /* UrlRequestDispatcherSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCE8C71D366986000DCDFD /* UrlRequestDispatcherSpec.swift */; };
-		23CCE8CA1D366A6C000DCDFD /* UrlRequestTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCE8C91D366A6C000DCDFD /* UrlRequestTypeSpec.swift */; };
+		236FE5DE1D4913090071964D /* HttpClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE5D61D4913090071964D /* HttpClientSpec.swift */; };
+		236FE5DF1D4913090071964D /* JsonHttpClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE5D71D4913090071964D /* JsonHttpClientSpec.swift */; };
+		236FE5E01D4913090071964D /* UrlJsonResponseAdapterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE5D81D4913090071964D /* UrlJsonResponseAdapterSpec.swift */; };
+		236FE5E31D4913090071964D /* UrlRequestDispatcherSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE5DB1D4913090071964D /* UrlRequestDispatcherSpec.swift */; };
+		236FE5E41D4913090071964D /* UrlRequestTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE5DC1D4913090071964D /* UrlRequestTypeSpec.swift */; };
+		236FE5E61D4913120071964D /* Oauth2HandlerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE5E51D4913120071964D /* Oauth2HandlerSpec.swift */; };
+		236FE5EA1D4913910071964D /* UrlParameterEncodingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE5E81D4913910071964D /* UrlParameterEncodingSpec.swift */; };
+		236FE5EB1D4913910071964D /* UrlRequestBuilderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE5E91D4913910071964D /* UrlRequestBuilderSpec.swift */; };
 		23ED6E9C1D38279E00A5F2A2 /* UserDefaultsObservableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ED6E9B1D38279E00A5F2A2 /* UserDefaultsObservableSpec.swift */; };
 		C35757F1929D573531006F7C /* Pods_Core_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA1BE979F535E3E7F81058B /* Pods_Core_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		106B568613CF427A25D3D11C /* Pods_Core_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		23433B291D3646490018405C /* HttpClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClientSpec.swift; sourceTree = "<group>"; };
-		23433B2C1D36687A0018405C /* UrlJsonResponseAdapterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlJsonResponseAdapterSpec.swift; sourceTree = "<group>"; };
-		23433B2F1D3668CD0018405C /* UrlParameterEncodingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlParameterEncodingSpec.swift; sourceTree = "<group>"; };
-		235EBA2F1D3C9E8E007C215C /* JsonHttpClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonHttpClientSpec.swift; sourceTree = "<group>"; };
-		23CCE8C51D366968000DCDFD /* UrlRequestBuilderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlRequestBuilderSpec.swift; sourceTree = "<group>"; };
-		23CCE8C71D366986000DCDFD /* UrlRequestDispatcherSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlRequestDispatcherSpec.swift; sourceTree = "<group>"; };
-		23CCE8C91D366A6C000DCDFD /* UrlRequestTypeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlRequestTypeSpec.swift; sourceTree = "<group>"; };
+		236FE5D61D4913090071964D /* HttpClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClientSpec.swift; sourceTree = "<group>"; };
+		236FE5D71D4913090071964D /* JsonHttpClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonHttpClientSpec.swift; sourceTree = "<group>"; };
+		236FE5D81D4913090071964D /* UrlJsonResponseAdapterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlJsonResponseAdapterSpec.swift; sourceTree = "<group>"; };
+		236FE5DB1D4913090071964D /* UrlRequestDispatcherSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlRequestDispatcherSpec.swift; sourceTree = "<group>"; };
+		236FE5DC1D4913090071964D /* UrlRequestTypeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlRequestTypeSpec.swift; sourceTree = "<group>"; };
+		236FE5E51D4913120071964D /* Oauth2HandlerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Oauth2HandlerSpec.swift; sourceTree = "<group>"; };
+		236FE5E81D4913910071964D /* UrlParameterEncodingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlParameterEncodingSpec.swift; sourceTree = "<group>"; };
+		236FE5E91D4913910071964D /* UrlRequestBuilderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlRequestBuilderSpec.swift; sourceTree = "<group>"; };
 		23ED6E9B1D38279E00A5F2A2 /* UserDefaultsObservableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsObservableSpec.swift; sourceTree = "<group>"; };
 		2BA82767E7F710C8ADA557C9 /* Pods-Core_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Core_Tests/Pods-Core_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4B9452AAB20CE33E9E5BF91B /* Pods-Core_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Core_Example/Pods-Core_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,15 +77,40 @@
 		23433B281D3646400018405C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				23433B291D3646490018405C /* HttpClientSpec.swift */,
-				23433B2C1D36687A0018405C /* UrlJsonResponseAdapterSpec.swift */,
-				23433B2F1D3668CD0018405C /* UrlParameterEncodingSpec.swift */,
-				23CCE8C51D366968000DCDFD /* UrlRequestBuilderSpec.swift */,
-				23CCE8C71D366986000DCDFD /* UrlRequestDispatcherSpec.swift */,
-				23CCE8C91D366A6C000DCDFD /* UrlRequestTypeSpec.swift */,
-				235EBA2F1D3C9E8E007C215C /* JsonHttpClientSpec.swift */,
+				236FE5E71D4913910071964D /* RequestBuilder */,
+				236FE5D51D4913090071964D /* Client */,
+				236FE5DD1D4913090071964D /* Oauth2 */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		236FE5D51D4913090071964D /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				236FE5D61D4913090071964D /* HttpClientSpec.swift */,
+				236FE5D71D4913090071964D /* JsonHttpClientSpec.swift */,
+				236FE5D81D4913090071964D /* UrlJsonResponseAdapterSpec.swift */,
+				236FE5DB1D4913090071964D /* UrlRequestDispatcherSpec.swift */,
+				236FE5DC1D4913090071964D /* UrlRequestTypeSpec.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		236FE5DD1D4913090071964D /* Oauth2 */ = {
+			isa = PBXGroup;
+			children = (
+				236FE5E51D4913120071964D /* Oauth2HandlerSpec.swift */,
+			);
+			path = Oauth2;
+			sourceTree = "<group>";
+		};
+		236FE5E71D4913910071964D /* RequestBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				236FE5E81D4913910071964D /* UrlParameterEncodingSpec.swift */,
+				236FE5E91D4913910071964D /* UrlRequestBuilderSpec.swift */,
+			);
+			path = RequestBuilder;
 			sourceTree = "<group>";
 		};
 		23ED6E991D38279400A5F2A2 /* Persistence */ = {
@@ -269,14 +296,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23CCE8C61D366968000DCDFD /* UrlRequestBuilderSpec.swift in Sources */,
+				236FE5E61D4913120071964D /* Oauth2HandlerSpec.swift in Sources */,
+				236FE5EB1D4913910071964D /* UrlRequestBuilderSpec.swift in Sources */,
+				236FE5DF1D4913090071964D /* JsonHttpClientSpec.swift in Sources */,
+				236FE5E31D4913090071964D /* UrlRequestDispatcherSpec.swift in Sources */,
 				23ED6E9C1D38279E00A5F2A2 /* UserDefaultsObservableSpec.swift in Sources */,
-				23433B2E1D3668A40018405C /* UrlJsonResponseAdapterSpec.swift in Sources */,
-				23CCE8CA1D366A6C000DCDFD /* UrlRequestTypeSpec.swift in Sources */,
-				23CCE8C81D366986000DCDFD /* UrlRequestDispatcherSpec.swift in Sources */,
-				23433B2A1D3646490018405C /* HttpClientSpec.swift in Sources */,
-				23433B301D3668CD0018405C /* UrlParameterEncodingSpec.swift in Sources */,
-				235EBA301D3C9E8E007C215C /* JsonHttpClientSpec.swift in Sources */,
+				236FE5E41D4913090071964D /* UrlRequestTypeSpec.swift in Sources */,
+				236FE5E01D4913090071964D /* UrlJsonResponseAdapterSpec.swift in Sources */,
+				236FE5DE1D4913090071964D /* HttpClientSpec.swift in Sources */,
+				236FE5EA1D4913910071964D /* UrlParameterEncodingSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
