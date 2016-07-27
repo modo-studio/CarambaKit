@@ -1,0 +1,41 @@
+lane :pods do
+  cocoapods(podfile: "Example/")
+end
+
+lane :tests do
+  scan(workspace: "Example/Core.xcworkspace", scheme: "Core_Tests", clean: true)
+end
+
+lane :travis do
+  pods
+  tests
+end
+
+lane :push do
+  ensure_git_branch
+  if is_ci?
+    version = version_bump_podspec(path: "Core.podspec", bump_type: "patch")
+    changelog = changelog_from_git_commits
+    github_release = set_github_release(
+      repository_name: "tulapps/core",
+      api_token: ENV['GITHUB_TOKEN'],
+      name: version,
+      tag_name: version,
+      description: changelog,
+      commitish: "master"
+    )
+    push_to_git_remote
+    pod_push(path: 'Core.podspec', repo: 'tulapps', sources: ['https://github.com/tulapps/Specs', 'https://github.com/CocoaPods/Specs'])
+    slack(
+      message: "A new version of Core has been deployed",
+      channel: "#notifications",
+      success: true,
+      payload: {
+        'Build Date' => Time.new.to_s,
+        'Version' => version,
+      },
+      default_payloads: [:git_branch, :git_author]
+    )
+
+  end
+end

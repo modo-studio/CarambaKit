@@ -1,9 +1,11 @@
 osx_image: xcode7.3
 language: objective-c
 before_install:
-- gem install cocoapods
-- pod repo add tulapps https://github.com/tulapps/Specs
-- pod repo update
-- pod install --project-directory=Example
+- gem install bundler
+- bundle install
+- bundle exec pod repo add tulapps https://github.com/tulapps/Specs
 script:
-- set -o pipefail && xcodebuild test -workspace Example/Core.xcworkspace -scheme Core_Tests -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
+- bundle exec fastlane travis
+after_success:
+- bundle exec fastlane push
+
