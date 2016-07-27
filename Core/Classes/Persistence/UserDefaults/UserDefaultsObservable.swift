@@ -1,7 +1,7 @@
 import Foundation
 import RxSwift
 
-internal class UserDefaultsObservable<T>: NSObject {
+public class UserDefaultsObservable<T>: NSObject {
     
     // MARK: - Attributes
     
@@ -30,7 +30,7 @@ internal class UserDefaultsObservable<T>: NSObject {
     
     // MARK: - KVO
     
-    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+    override public func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
         self.subject.onNext(self.userDefaults.objectForKey(self.key) as? T)
     }
     
