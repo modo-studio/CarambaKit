@@ -10,7 +10,7 @@ public struct Oauth2Session: Equatable {
     }
 }
 
-public func ==(lhs: Oauth2Session, rhs: Oauth2Session) -> Bool {
+public func == (lhs: Oauth2Session, rhs: Oauth2Session) -> Bool {
     return lhs.accessToken == rhs.accessToken &&
     lhs.refreshToken == rhs.refreshToken
 }

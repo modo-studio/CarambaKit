@@ -2,26 +2,24 @@ import Foundation
 import RxSwift
 
 public class Oauth2Handler {
-    
+
     // MARK: - Attributes
-    
+
     private let entity: Oauth2Entity
     private let client: JsonHttpClient
     private weak var delegate: Oauth2Delegate?
     private var active: Bool = false
-    
-    
+
     // MARK: - Init
-    
+
     public init(entity: Oauth2Entity, delegate: Oauth2Delegate, client: JsonHttpClient = JsonHttpClient()) {
         self.entity = entity
         self.delegate = delegate
         self.client = client
     }
-    
-    
+
     // MARK: - Public
-    
+
     public func start() throws {
         if self.active {
             throw Oauth2Error.AlreadyStarted
@@ -29,7 +27,7 @@ public class Oauth2Handler {
         self.active = true
         self.delegate?.oauth2OpenUrl(self.entity.authorizationUrl())
     }
-    
+
     public func shouldRedirectUrl(url: String) -> Bool {
         let request = self.entity.authenticationRequestFromUrl(url)
         if let request = request {
@@ -37,10 +35,9 @@ public class Oauth2Handler {
         }
         return request == nil
     }
-    
-    
+
     // MARK: - Private
-    
+
     private func performAuthentication(request: NSURLRequest) {
         _ = self.client.request(request)
             .doOnNext { [weak self] (json, response) in
@@ -48,8 +45,7 @@ public class Oauth2Handler {
                     if let session = try self?.entity.sessionFromJSON(json) {
                         self?.delegate?.oauth2DidComplete(withSession: session)
                     }
-                }
-                catch {
+                } catch {
                     self?.delegate?.oauth2DidFail(withError: error)
                 }
                 self?.active = false
@@ -60,5 +56,5 @@ public class Oauth2Handler {
             }
             .subscribe()
     }
-    
+
 }

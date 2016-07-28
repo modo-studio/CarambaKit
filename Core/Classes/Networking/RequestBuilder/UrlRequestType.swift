@@ -1,9 +1,9 @@
 import Foundation
 
 public enum UrlRequestType: CustomStringConvertible {
-    
+
     case POST, GET, PUT, PATCH, DELETE
-    
+
     public var description: String {
         switch self {
         case .POST: return "POST"
@@ -13,6 +13,5 @@ public enum UrlRequestType: CustomStringConvertible {
         case .DELETE: return "DELETE"
         }
     }
-    
+
 }
-    
