@@ -8,7 +8,6 @@ script:
 - bundle exec fastlane travis
 after_success:
   bash <(curl -s https://codecov.io/bash)
-  if ([ "$TRAVIS_BRANCH" == "master" ] || [ ! -z "$TRAVIS_TAG" ]) && 
-      [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+  if ([ "$TRAVIS_BRANCH" == "master" ] || [ ! -z "$TRAVIS_TAG" ]) && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     bundle exec fastlane push
   fi
