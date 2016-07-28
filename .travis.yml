@@ -7,5 +7,7 @@ before_install:
 script:
 - bundle exec fastlane travis
 after_success:
-- bundle exec fastlane push
-
+  if ([ "$TRAVIS_BRANCH" == "master" ] || [ ! -z "$TRAVIS_TAG" ]) && 
+      [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+    bundle exec fastlane push
+  fi
