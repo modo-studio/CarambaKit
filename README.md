@@ -1,6 +1,8 @@
 # Core
 
 [![CI Status](http://img.shields.io/travis/tulapps/Core.svg?style=flat)](https://travis-ci.org/tulapps/Core)
+[![codecov](https://codecov.io/gh/tulapps/Core/branch/master/graph/badge.svg)](https://codecov.io/gh/tulapps/Core)
+
 
 ## Example
 
