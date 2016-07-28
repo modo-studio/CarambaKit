@@ -69,6 +69,8 @@ GEM
       octokit (~> 4.2)
       redcarpet (~> 3.3)
       terminal-table (~> 1)
+    danger-prose (2.0.1)
+      danger
     deliver (1.13.1)
       credentials_manager (>= 0.16.0, < 1.0.0)
       fastimage (~> 1.6)
@@ -304,6 +306,7 @@ PLATFORMS
 DEPENDENCIES
   cocoapods
   danger
+  danger-prose
   fastlane
 
 BUNDLED WITH
