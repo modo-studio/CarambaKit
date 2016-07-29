@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Core'
-  s.version          = '0.0.6'
+  s.version          = '0.0.7'
   s.summary          = 'Core components used for our projects'
   s.description      = <<-DESC
 Set of Core components, including Networking, Persistence, .. that are used in our apps.s
