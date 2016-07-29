@@ -15,6 +15,7 @@
 		236FE5E61D4913120071964D /* Oauth2HandlerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE5E51D4913120071964D /* Oauth2HandlerSpec.swift */; };
 		236FE5EA1D4913910071964D /* UrlParameterEncodingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE5E81D4913910071964D /* UrlParameterEncodingSpec.swift */; };
 		236FE5EB1D4913910071964D /* UrlRequestBuilderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE5E91D4913910071964D /* UrlRequestBuilderSpec.swift */; };
+		239364F31D4B6EDF00C3F5A6 /* SessionRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239364F21D4B6EDF00C3F5A6 /* SessionRepositorySpec.swift */; };
 		23ED6E9C1D38279E00A5F2A2 /* UserDefaultsObservableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ED6E9B1D38279E00A5F2A2 /* UserDefaultsObservableSpec.swift */; };
 		C35757F1929D573531006F7C /* Pods_Core_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA1BE979F535E3E7F81058B /* Pods_Core_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,7 @@
 		236FE5E51D4913120071964D /* Oauth2HandlerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Oauth2HandlerSpec.swift; sourceTree = "<group>"; };
 		236FE5E81D4913910071964D /* UrlParameterEncodingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlParameterEncodingSpec.swift; sourceTree = "<group>"; };
 		236FE5E91D4913910071964D /* UrlRequestBuilderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlRequestBuilderSpec.swift; sourceTree = "<group>"; };
+		239364F21D4B6EDF00C3F5A6 /* SessionRepositorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionRepositorySpec.swift; sourceTree = "<group>"; };
 		23ED6E9B1D38279E00A5F2A2 /* UserDefaultsObservableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsObservableSpec.swift; sourceTree = "<group>"; };
 		2BA82767E7F710C8ADA557C9 /* Pods-Core_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Core_Tests/Pods-Core_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4B9452AAB20CE33E9E5BF91B /* Pods-Core_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Core_Example/Pods-Core_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		23433B281D3646400018405C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				239364F11D4B6EDF00C3F5A6 /* Session */,
 				236FE5E71D4913910071964D /* RequestBuilder */,
 				236FE5D51D4913090071964D /* Client */,
 				236FE5DD1D4913090071964D /* Oauth2 */,
@@ -111,6 +114,14 @@
 				236FE5E91D4913910071964D /* UrlRequestBuilderSpec.swift */,
 			);
 			path = RequestBuilder;
+			sourceTree = "<group>";
+		};
+		239364F11D4B6EDF00C3F5A6 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				239364F21D4B6EDF00C3F5A6 /* SessionRepositorySpec.swift */,
+			);
+			path = Session;
 			sourceTree = "<group>";
 		};
 		23ED6E991D38279400A5F2A2 /* Persistence */ = {
@@ -314,6 +325,7 @@
 				236FE5E61D4913120071964D /* Oauth2HandlerSpec.swift in Sources */,
 				236FE5EB1D4913910071964D /* UrlRequestBuilderSpec.swift in Sources */,
 				236FE5DF1D4913090071964D /* JsonHttpClientSpec.swift in Sources */,
+				239364F31D4B6EDF00C3F5A6 /* SessionRepositorySpec.swift in Sources */,
 				236FE5E31D4913090071964D /* UrlRequestDispatcherSpec.swift in Sources */,
 				23ED6E9C1D38279E00A5F2A2 /* UserDefaultsObservableSpec.swift in Sources */,
 				236FE5E41D4913090071964D /* UrlRequestTypeSpec.swift in Sources */,
