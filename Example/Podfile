@@ -2,6 +2,8 @@ use_frameworks!
 
 target 'Core_Tests' do
   pod 'Core', :path => '../'
+  pod 'Core/Networking', :path => '../'
+  pod 'Core/Persistence', :path => '../'
   pod 'Quick', '~> 0.8'
   pod 'Nimble', '~> 3.0'
   pod 'Mockingjay'

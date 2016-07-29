@@ -46,6 +46,15 @@ client.request(request).subscribeNext { response in
 4. Call `start` on the handler to start the Oauth2 flow.
 5. :tada:
 
+### SessionRepository
+
+Fetch, store, and clear a session from the Keychain:
+
+```swift
+let repository = SessionRepository(name: "idonethis")
+let session = repository.fetch()
+```
+
 ### Persistence
 
 #### UserDefaultsObservable

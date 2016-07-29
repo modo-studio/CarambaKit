@@ -1,15 +1,17 @@
 PODS:
-  - Core (0.0.3):
-    - Core/Foundation (= 0.0.3)
-    - Core/Networking (= 0.0.3)
-    - Core/Persistence (= 0.0.3)
-  - Core/Foundation (0.0.3):
+  - Core (0.0.6):
+    - Core/Foundation (= 0.0.6)
+    - Core/Networking (= 0.0.6)
+    - Core/Persistence (= 0.0.6)
+  - Core/Foundation (0.0.6):
     - RxSwift (~> 2.6)
     - SwiftyJSON (~> 2.3)
-  - Core/Networking (0.0.3):
+  - Core/Networking (0.0.6):
     - Core/Foundation
-  - Core/Persistence (0.0.3):
+    - KeychainSwift (~> 3.0)
+  - Core/Persistence (0.0.6):
     - Core/Foundation
+  - KeychainSwift (3.0.16)
   - Mockingjay (1.2.2):
     - Mockingjay/Core (= 1.2.2)
     - Mockingjay/XCTest (= 1.2.2)
@@ -25,6 +27,8 @@ PODS:
 
 DEPENDENCIES:
   - Core (from `../`)
+  - Core/Networking (from `../`)
+  - Core/Persistence (from `../`)
   - Mockingjay
   - Nimble (~> 3.0)
   - Quick (~> 0.8)
@@ -34,7 +38,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Core: 2e19f03894af81b40b012a07864d3f82b9346604
+  Core: b72b3e169230a8b11dfaca831fe23adbf39cfbbb
+  KeychainSwift: a5bb85cd498ce2217b55e055ec59e9268d83384c
   Mockingjay: 5de65f14108473afc6727e05df9a3ecc9cef8562
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
   Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
@@ -42,6 +47,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   URITemplate: 398a48d6559e23b77bd41176b675b017ad1fc959
 
-PODFILE CHECKSUM: 7bd073d37418a0d2e067c9a2b2638e1ace13ce6a
+PODFILE CHECKSUM: e04bbaacd6417b5d9fc9e0b5b816e96da85eea44
 
 COCOAPODS: 1.0.1
