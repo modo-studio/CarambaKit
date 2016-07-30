@@ -3,7 +3,7 @@ language: objective-c
 before_install:
 - gem install bundler
 - bundle install
-- bundle exec pod repo add tulapps https://github.com/tulapps/Specs
+- bundle exec pod repo add carambastudio https://github.com/carambastudio/Specs
 script:
 - bundle exec fastlane travis
 after_success:
