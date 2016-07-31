@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		032B941A9F17BC557D5AC363 /* Pods_CarambaKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E46EB39E36883F242BBC5E14 /* Pods_CarambaKit_Tests.framework */; };
 		236FE5DE1D4913090071964D /* HttpClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE5D61D4913090071964D /* HttpClientSpec.swift */; };
 		236FE5DF1D4913090071964D /* JsonHttpClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE5D71D4913090071964D /* JsonHttpClientSpec.swift */; };
 		236FE5E01D4913090071964D /* UrlJsonResponseAdapterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE5D81D4913090071964D /* UrlJsonResponseAdapterSpec.swift */; };
@@ -17,10 +18,10 @@
 		236FE5EB1D4913910071964D /* UrlRequestBuilderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE5E91D4913910071964D /* UrlRequestBuilderSpec.swift */; };
 		239364F31D4B6EDF00C3F5A6 /* SessionRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239364F21D4B6EDF00C3F5A6 /* SessionRepositorySpec.swift */; };
 		23ED6E9C1D38279E00A5F2A2 /* UserDefaultsObservableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ED6E9B1D38279E00A5F2A2 /* UserDefaultsObservableSpec.swift */; };
-		C35757F1929D573531006F7C /* Pods_Core_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA1BE979F535E3E7F81058B /* Pods_Core_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0088FFE3F11D49E2E8CBE231 /* Pods-CarambaKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarambaKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarambaKit_Tests/Pods-CarambaKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		106B568613CF427A25D3D11C /* Pods_Core_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		236FE5D61D4913090071964D /* HttpClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClientSpec.swift; sourceTree = "<group>"; };
 		236FE5D71D4913090071964D /* JsonHttpClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonHttpClientSpec.swift; sourceTree = "<group>"; };
@@ -33,14 +34,16 @@
 		239364F21D4B6EDF00C3F5A6 /* SessionRepositorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionRepositorySpec.swift; sourceTree = "<group>"; };
 		23ED6E9B1D38279E00A5F2A2 /* UserDefaultsObservableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsObservableSpec.swift; sourceTree = "<group>"; };
 		2BA82767E7F710C8ADA557C9 /* Pods-Core_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Core_Tests/Pods-Core_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		468D79AA85FE60538FA7DA29 /* Pods-CarambaKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarambaKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarambaKit_Tests/Pods-CarambaKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4B9452AAB20CE33E9E5BF91B /* Pods-Core_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Core_Example/Pods-Core_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		607FACE51AFB9204008FA782 /* Core_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Core_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACE51AFB9204008FA782 /* CarambaKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarambaKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF179A87BA0EF7634C9838FB /* Core.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Core.podspec; path = ../Core.podspec; sourceTree = "<group>"; };
 		C0C1362F32BCA2E6738D6723 /* Pods-Core_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Core_Tests/Pods-Core_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		CCA1BE979F535E3E7F81058B /* Pods_Core_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF822DB45FA80E0D2C74665 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E3E2E524A8A2C0D147AA9356 /* Pods-Core_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Core_Example/Pods-Core_Example.release.xcconfig"; sourceTree = "<group>"; };
+		E46EB39E36883F242BBC5E14 /* Pods_CarambaKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarambaKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA66E70EF371D2B2BD4257E3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C35757F1929D573531006F7C /* Pods_Core_Tests.framework in Frameworks */,
+				032B941A9F17BC557D5AC363 /* Pods_CarambaKit_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +64,7 @@
 			children = (
 				106B568613CF427A25D3D11C /* Pods_Core_Example.framework */,
 				CCA1BE979F535E3E7F81058B /* Pods_Core_Tests.framework */,
+				E46EB39E36883F242BBC5E14 /* Pods_CarambaKit_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -72,6 +76,8 @@
 				E3E2E524A8A2C0D147AA9356 /* Pods-Core_Example.release.xcconfig */,
 				2BA82767E7F710C8ADA557C9 /* Pods-Core_Tests.debug.xcconfig */,
 				C0C1362F32BCA2E6738D6723 /* Pods-Core_Tests.release.xcconfig */,
+				468D79AA85FE60538FA7DA29 /* Pods-CarambaKit_Tests.debug.xcconfig */,
+				0088FFE3F11D49E2E8CBE231 /* Pods-CarambaKit_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -154,7 +160,7 @@
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607FACE51AFB9204008FA782 /* Core_Tests.xctest */,
+				607FACE51AFB9204008FA782 /* CarambaKit_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,9 +196,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		607FACE41AFB9204008FA782 /* Core_Tests */ = {
+		607FACE41AFB9204008FA782 /* CarambaKit_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Core_Tests" */;
+			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "CarambaKit_Tests" */;
 			buildPhases = (
 				26125EA5B26C138845A87651 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
@@ -206,9 +212,9 @@
 			);
 			dependencies = (
 			);
-			name = Core_Tests;
+			name = CarambaKit_Tests;
 			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* Core_Tests.xctest */;
+			productReference = 607FACE51AFB9204008FA782 /* CarambaKit_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -227,7 +233,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "Core" */;
+			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "CarambaKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -240,7 +246,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				607FACE41AFB9204008FA782 /* Core_Tests */,
+				607FACE41AFB9204008FA782 /* CarambaKit_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -297,7 +303,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Core_Tests/Pods-Core_Tests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarambaKit_Tests/Pods-CarambaKit_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AD025F9A21AD97A3CF31E664 /* [CP] Copy Pods Resources */ = {
@@ -312,7 +318,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Core_Tests/Pods-Core_Tests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarambaKit_Tests/Pods-CarambaKit_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -422,7 +428,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2BA82767E7F710C8ADA557C9 /* Pods-Core_Tests.debug.xcconfig */;
+			baseConfigurationReference = 468D79AA85FE60538FA7DA29 /* Pods-CarambaKit_Tests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -436,14 +442,14 @@
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CarambaKit_Tests;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0C1362F32BCA2E6738D6723 /* Pods-Core_Tests.release.xcconfig */;
+			baseConfigurationReference = 0088FFE3F11D49E2E8CBE231 /* Pods-CarambaKit_Tests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -453,14 +459,14 @@
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CarambaKit_Tests;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "Core" */ = {
+		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "CarambaKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACED1AFB9204008FA782 /* Debug */,
@@ -469,7 +475,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Core_Tests" */ = {
+		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "CarambaKit_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACF31AFB9204008FA782 /* Debug */,

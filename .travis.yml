@@ -3,7 +3,7 @@ language: objective-c
 before_install:
 - gem install bundler
 - bundle install
-- bundle exec pod repo add carambastudio https://github.com/carambastudio/Specs
+- bundle exec pod repo add carambastudio https://github.com/carambastudio/CarambaKit
 script:
 - bundle exec fastlane travis
 after_success:

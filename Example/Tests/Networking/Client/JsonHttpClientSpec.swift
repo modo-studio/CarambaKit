@@ -3,7 +3,7 @@ import Quick
 import Nimble
 import RxSwift
 
-@testable import Core
+@testable import CarambaKit
 
 class JsonHttpClientSpec: QuickSpec {
     override func spec() {

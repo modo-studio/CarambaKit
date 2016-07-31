@@ -4,7 +4,7 @@ import Nimble
 import SwiftyJSON
 import RxSwift
 
-@testable import Core
+@testable import CarambaKit
 
 class Oauth2HandlerSpec: QuickSpec {
     override func spec() {

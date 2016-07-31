@@ -4,11 +4,11 @@ disabled_rules:
   - control_statement
   - force_cast
 included:
-  - ../Core
+  - ../CarambaKit
 excluded:
   - ../Example
   - ../fastlane
-  - ../Core/Classes/Networking/RequestBuilder/UrlParameterEncoding.swift
+  - ../CarambaKit/Classes/Networking/RequestBuilder/UrlParameterEncoding.swift
 force_cast: warning
 force_try:
   severity: warning
