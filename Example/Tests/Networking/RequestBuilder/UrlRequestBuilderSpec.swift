@@ -3,7 +3,7 @@ import Quick
 import Nimble
 import SwiftyJSON
 
-@testable import Core
+@testable import CarambaKit
 
 class UrlRequestSharedExamplesConfiguration: QuickConfiguration {
     override class func configure(configuration: Configuration) {

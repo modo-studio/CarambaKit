@@ -3,7 +3,7 @@ import Quick
 import Nimble
 import Mockingjay
 
-@testable import Core
+@testable import CarambaKit
 
 class UrlRequestDispatcherSpec: QuickSpec {
     override func spec() {

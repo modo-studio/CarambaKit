@@ -2,7 +2,7 @@ import Foundation
 import Quick
 import Nimble
 
-@testable import Core
+@testable import CarambaKit
 
 class UrlJsonResponseAdapterSpec: QuickSpec {
     override func spec() {

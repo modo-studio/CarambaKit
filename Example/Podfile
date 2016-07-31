@@ -1,9 +1,9 @@
 use_frameworks!
 
-target 'Core_Tests' do
-  pod 'Core', :path => '../'
-  pod 'Core/Networking', :path => '../'
-  pod 'Core/Persistence', :path => '../'
+target 'CarambaKit_Tests' do
+  pod 'CarambaKit', :path => '../'
+  pod 'CarambaKit/Networking', :path => '../'
+  pod 'CarambaKit/Persistence', :path => '../'
   pod 'Quick', '~> 0.8'
   pod 'Nimble', '~> 3.0'
   pod 'Mockingjay'

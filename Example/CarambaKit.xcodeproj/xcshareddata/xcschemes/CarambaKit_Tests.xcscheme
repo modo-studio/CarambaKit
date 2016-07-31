@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "Core_Tests.xctest"
-               BlueprintName = "Core_Tests"
-               ReferencedContainer = "container:Core.xcodeproj">
+               BuildableName = "CarambaKit_Tests.xctest"
+               BlueprintName = "CarambaKit_Tests"
+               ReferencedContainer = "container:CarambaKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,9 +34,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "Core_Tests.xctest"
-               BlueprintName = "Core_Tests"
-               ReferencedContainer = "container:Core.xcodeproj">
+               BuildableName = "CarambaKit_Tests.xctest"
+               BlueprintName = "CarambaKit_Tests"
+               ReferencedContainer = "container:CarambaKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACE41AFB9204008FA782"
-            BuildableName = "Core_Tests.xctest"
-            BlueprintName = "Core_Tests"
-            ReferencedContainer = "container:Core.xcodeproj">
+            BuildableName = "CarambaKit_Tests.xctest"
+            BlueprintName = "CarambaKit_Tests"
+            ReferencedContainer = "container:CarambaKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACE41AFB9204008FA782"
-            BuildableName = "Core_Tests.xctest"
-            BlueprintName = "Core_Tests"
-            ReferencedContainer = "container:Core.xcodeproj">
+            BuildableName = "CarambaKit_Tests.xctest"
+            BlueprintName = "CarambaKit_Tests"
+            ReferencedContainer = "container:CarambaKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
