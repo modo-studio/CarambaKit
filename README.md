@@ -1,7 +1,7 @@
 # Core
 
-[![CI Status](http://img.shields.io/travis/carambastudio/Core.svg?style=flat)](https://travis-ci.org/carambastudio/Core)
-[![codecov](https://codecov.io/gh/carambastudio/Core/branch/master/graph/badge.svg)](https://codecov.io/gh/carambastudio/Core)
+[![CI Status](http://img.shields.io/travis/carambastudio/CarambaKit.svg?style=flat)](https://travis-ci.org/carambastudio/CarambaKit)
+[![codecov](https://codecov.io/gh/carambastudio/CarambaKit/branch/master/graph/badge.svg)](https://codecov.io/gh/carambastudio/CarambaKit)
 
 
 ## Example
@@ -12,7 +12,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-Core podspec is part of the [Specs]() repository. In order to be recognized by CocoaPods you have to add that repository to your CocoaPods setup:
+CarambaKit podspec is part of the [Specs]() repository. In order to be recognized by CocoaPods you have to add that repository to your CocoaPods setup:
 
 ```
 pod repo add carambastudio https://github.com/carambastudio/Specs
@@ -21,12 +21,12 @@ pod repo add carambastudio https://github.com/carambastudio/Specs
 To install it, simply add the following line to your Podfile:
 
 ```ruby
-pod "Core"
-pod "Core/Networking"
-pod "Core/Persistence"
+pod "CarambaKit"
+pod "CarambaKit/Networking"
+pod "CarambaKit/Persistence"
 ```
 
-## Core
+## CarambaKit
 
 ### Networking
 
@@ -81,4 +81,4 @@ self.observable.rx().subscribeNext { newValue in
 
 ## License
 
-Core is available under the MIT license. See the LICENSE file for more info.
+CarambaKit is available under the MIT license. See the LICENSE file for more info.
