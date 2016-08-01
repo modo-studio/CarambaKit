@@ -12,29 +12,27 @@ lane :travis do
 end
 
 lane :push do
-  if is_ci?
-    version = version_bump_podspec(path: "CarambaKit.podspec", bump_type: "patch")
-    changelog = changelog_from_git_commits
-    github_release = set_github_release(
-      repository_name: "carambastudio/CarambaKit",
-      api_token: ENV['GITHUB_TOKEN'],
-      name: version,
-      tag_name: version,
-      description: changelog,
-      commitish: "master"
-    )
-    push_to_git_remote
-    pod_push(path: 'CarambaKit.podspec', repo: 'carambastudio', sources: ['https://github.com/carambastudio/Specs', 'https://github.com/CocoaPods/Specs'])
-    slack(
-      message: "A new version of CarambaKit has been deployed",
-      channel: "#notifications",
-      success: true,
-      payload: {
-        'Build Date' => Time.new.to_s,
-        'Version' => version,
-      },
-      default_payloads: [:git_branch, :git_author]
-    )
-
-  end
+  version = version_bump_podspec(path: "CarambaKit.podspec", bump_type: "patch")
+  changelog = changelog_from_git_commits
+  github_release = set_github_release(
+    repository_name: "carambastudio/CarambaKit",
+    api_token: ENV['GITHUB_TOKEN'],
+    name: version,
+    tag_name: version,
+    description: changelog,
+    commitish: "master"
+  )
+  push_to_git_remote
+  pod_push(allow_warnings: true)
+  pod_push(path: 'CarambaKit.podspec', allow_warnings: true, repo: 'carambastudio', sources: ['https://github.com/carambastudio/Specs', 'https://github.com/CocoaPods/Specs'])
+  slack(
+    message: "A new version of CarambaKit has been deployed",
+    channel: "#notifications",
+    success: true,
+    payload: {
+      'Build Date' => Time.new.to_s,
+      'Version' => version,
+    },
+    default_payloads: [:git_branch, :git_author]
+  )
 end
