@@ -1,7 +1,7 @@
 # CarambaKit
 
-[![CI Status](http://img.shields.io/travis/carambastudio/CarambaKit.svg?style=flat)](https://travis-ci.org/carambastudio/CarambaKit)
-[![codecov](https://codecov.io/gh/carambastudio/CarambaKit/branch/master/graph/badge.svg)](https://codecov.io/gh/carambastudio/CarambaKit)
+[![CI Status](http://img.shields.io/travis/carambalabs/CarambaKit.svg?style=flat)](https://travis-ci.org/carambalabs/CarambaKit)
+[![codecov](https://codecov.io/gh/carambalabs/CarambaKit/branch/master/graph/badge.svg)](https://codecov.io/gh/carambalabs/CarambaKit)
 
 
 ## Example
