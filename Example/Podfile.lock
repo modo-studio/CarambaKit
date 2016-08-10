@@ -1,15 +1,15 @@
 PODS:
-  - CarambaKit (0.0.9):
-    - CarambaKit/Foundation (= 0.0.9)
-    - CarambaKit/Networking (= 0.0.9)
-    - CarambaKit/Persistence (= 0.0.9)
-  - CarambaKit/Foundation (0.0.9):
+  - CarambaKit (0.0.19):
+    - CarambaKit/Foundation (= 0.0.19)
+    - CarambaKit/Networking (= 0.0.19)
+    - CarambaKit/Persistence (= 0.0.19)
+  - CarambaKit/Foundation (0.0.19):
     - RxSwift (~> 2.6)
     - SwiftyJSON (~> 2.3)
-  - CarambaKit/Networking (0.0.9):
+  - CarambaKit/Networking (0.0.19):
     - CarambaKit/Foundation
     - KeychainSwift (~> 3.0)
-  - CarambaKit/Persistence (0.0.9):
+  - CarambaKit/Persistence (0.0.19):
     - CarambaKit/Foundation
   - KeychainSwift (3.0.16)
   - Mockingjay (1.2.2):
@@ -38,7 +38,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CarambaKit: bdaf4ccfa9891b9539cbc956d2d43e517b1de104
+  CarambaKit: 3525bf97d7e3acfbf2e4ecf798772392f3975d33
   KeychainSwift: a5bb85cd498ce2217b55e055ec59e9268d83384c
   Mockingjay: 5de65f14108473afc6727e05df9a3ecc9cef8562
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
