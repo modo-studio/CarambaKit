@@ -12,7 +12,7 @@ lane :travis do
   pods
   tests
 end
-
+  
 lane :push do
   github_tag = last_git_tag
   github_tag ||= "0.0.1"
