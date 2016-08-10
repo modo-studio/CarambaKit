@@ -40,6 +40,5 @@ lane :push do
       'Build Date' => Time.new.to_s,
       'Version' => version,
     },
-    default_payloads: [:git_branch, :git_author]
-  )
+    default_payloads: [:git_branch, :git_author])
 end
