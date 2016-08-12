@@ -2,7 +2,7 @@
 
 [![CI Status](http://img.shields.io/travis/carambalabs/CarambaKit.svg?style=flat)](https://travis-ci.org/carambalabs/CarambaKit)
 [![codecov](https://codecov.io/gh/carambalabs/CarambaKit/branch/master/graph/badge.svg)](https://codecov.io/gh/carambalabs/CarambaKit)
-
+[![Dependency Status](https://gemnasium.com/badges/github.com/carambalabs/CarambaKit.svg)](https://gemnasium.com/github.com/carambalabs/CarambaKit)
 
 ## Example
 
