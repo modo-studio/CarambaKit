@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'CarambaKit'
-  s.version          = '0.0.37'
+  s.version          = '0.0.38'
   s.summary          = 'Core components used for our projects'
   s.description      = <<-DESC
 Set of Core components, including Networking, Persistence, .. that are used in our apps.s
