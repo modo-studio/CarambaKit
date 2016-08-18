@@ -50,7 +50,7 @@ public struct UrlRequestBuilder {
         return UrlRequestBuilder(baseUrl: self.baseUrl, type: self.type, path: self.path, parameters: self.parameters, body: body)
     }
 
-    public func build(parameterEncoding: UrlParameterEncoding = UrlParameterEncoding.URLEncodedInURL,
+    public func build(parameterEncoding parameterEncoding: UrlParameterEncoding = UrlParameterEncoding.URLEncodedInURL,
                       bodyEncoding: UrlParameterEncoding = UrlParameterEncoding.JSON) -> NSURLRequest {
         let url = NSURL(string: self.baseUrl)!.URLByAppendingPathComponent(self.path)
         let request = NSURLRequest(URL: url).mutableCopy() as! NSMutableURLRequest
