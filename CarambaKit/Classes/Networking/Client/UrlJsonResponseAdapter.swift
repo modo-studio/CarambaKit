@@ -10,7 +10,7 @@ public class UrlJsonResponseAdapter: Adapter<(data: NSData?, response: NSURLResp
     // MARK: - Public
 
     public override func adapt(input: (data: NSData?, response: NSURLResponse?)) -> (JSON, NSURLResponse?)! {
-        let json = JSON(input.data ?? NSData())
+        let json = JSON(data: input.data ?? NSData())
         return (json: json, response: input.response)
     }
 
