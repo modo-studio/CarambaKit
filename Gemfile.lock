@@ -71,8 +71,12 @@ GEM
       octokit (~> 4.2)
       redcarpet (~> 3.3)
       terminal-table (~> 1)
+    danger-changelog (0.1.0)
+      danger-plugin-api (~> 1.0)
     danger-mention (0.4.0)
       danger
+    danger-plugin-api (1.0.0)
+      danger (> 2.0)
     danger-prose (2.0.1)
       danger
     deliver (1.13.2)
@@ -312,6 +316,7 @@ PLATFORMS
 DEPENDENCIES
   cocoapods (= 1.1.0.beta.1)
   danger
+  danger-changelog
   danger-mention
   danger-prose
   fastlane
