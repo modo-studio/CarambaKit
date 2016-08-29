@@ -7,3 +7,4 @@ gem "versionomy"
 # Danger
 gem "danger"
 gem "danger-prose"
+gem "danger-mention"
