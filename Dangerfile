@@ -1,5 +1,5 @@
 # Mention
-run (max_reviewers=2)
+mention.run(2, [], [])
 
 # Changelog
 changelog.check
