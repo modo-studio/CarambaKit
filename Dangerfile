@@ -1,5 +1,5 @@
 # Mention
-run (max_reviewers=2: Integer, file_blacklist=[]: Array, user_blacklist=[]: Array)
+run (max_reviewers=2)
 
 # Changelog
 changelog.check
