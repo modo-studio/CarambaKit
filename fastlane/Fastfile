@@ -13,6 +13,7 @@ end
 lane :travis do
   pods
   tests
+  danger
 end
   
 lane :push do
