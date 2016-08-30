@@ -1,5 +1,9 @@
+has_library_changes = !git.modified_files.grep(/CarambaKit/).empty?
+
 # Changelog
-warn("The changelog file has to be updated") unless changelog.have_you_updated_changelog?
+if !git.modified_files.include?("CHANGELOG.md") && has_library_changes
+  fail("Please include a CHANGELOG entry. \n")
+end
 
 # The coding love
 the_coding_love.random

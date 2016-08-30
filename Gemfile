@@ -6,6 +6,5 @@ gem "versionomy"
 
 # Danger
 gem "danger"
-gem "danger-changelog"
 gem "danger-the_coding_love"
 gem "danger-junit"

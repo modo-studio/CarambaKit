@@ -72,13 +72,9 @@ GEM
       kramdown (~> 1.5)
       octokit (~> 4.2)
       terminal-table (~> 1)
-    danger-changelog (0.1.0)
-      danger-plugin-api (~> 1.0)
     danger-junit (0.7.1)
       danger (> 2.0)
       ox (~> 2.0)
-    danger-plugin-api (1.0.0)
-      danger (> 2.0)
     danger-the_coding_love (0.0.3)
       danger (~> 3.0)
       nokogiri
@@ -331,7 +327,6 @@ PLATFORMS
 DEPENDENCIES
   cocoapods (= 1.1.0.beta.1)
   danger
-  danger-changelog
   danger-junit
   danger-the_coding_love
   fastlane
