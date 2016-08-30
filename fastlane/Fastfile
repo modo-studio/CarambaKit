@@ -11,9 +11,9 @@ lane :tests do
 end
 
 lane :travis do
-  danger
   pods
   tests
+  danger
 end
   
 lane :push do
