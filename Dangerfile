@@ -8,7 +8,7 @@ changelog.check
 the_coding_love.random
 
 # Junit
-junit.parse "/fastlane/test_output/report.junit"
+junit.parse "../fastlane/test_output/report.junit"
 junit.report
 
 # Prose
