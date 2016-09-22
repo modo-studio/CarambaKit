@@ -1,6 +1,7 @@
 import Foundation
 import SwiftyJSON
 
+@available(*, deprecated, message: "Use https://github.com/carambalabs/paparajote instead")
 public protocol Oauth2Entity {
 
     func authorizationUrl() -> String

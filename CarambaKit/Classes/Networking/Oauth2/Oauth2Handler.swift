@@ -1,6 +1,7 @@
 import Foundation
 import RxSwift
 
+@available(*, deprecated, message: "Use https://github.com/carambalabs/paparajote instead")
 public class Oauth2Handler {
 
     // MARK: - Attributes
