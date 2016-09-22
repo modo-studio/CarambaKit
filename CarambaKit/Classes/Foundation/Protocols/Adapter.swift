@@ -6,7 +6,7 @@ public class Adapter<I, O> {
 
     public init() {}
 
-    public func adapt(input: I) -> O! {
+    public func adapt(_ input: I) -> O! {
         assertionFailure("This method must be overriden")
         return nil
     }

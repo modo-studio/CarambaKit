@@ -72,14 +72,14 @@ private class SessionMockAdapter: Adapter<URLRequest, URLRequest> {
         self.outputRequest = outputRequest
     }
     
-    fileprivate override func adapt(input: URLRequest) -> URLRequest! {
+    fileprivate override func adapt(_ input: URLRequest) -> URLRequest! {
         return outputRequest
     }
     
 }
 
 private class ResponseMockAdapter: Adapter<(data: Data?, response: URLResponse?), (String, URLResponse?)> {
-    fileprivate override func adapt(input: (data: Data?, response: URLResponse?)) -> (String, URLResponse?)! {
+    fileprivate override func adapt(_ input: (data: Data?, response: URLResponse?)) -> (String, URLResponse?)! {
         return ("works", input.response)
     }
 }
