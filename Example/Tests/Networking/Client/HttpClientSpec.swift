@@ -9,20 +9,20 @@ class HttpClientSpec: QuickSpec {
     
     override func spec() {
         
-        var authenticatedRequest: NSURLRequest!
+        var authenticatedRequest: URLRequest!
         var sessionAdapter: SessionMockAdapter!
         var responseAdapter: ResponseMockAdapter!
         var dispatcher: MockDispatcher!
         var subject: HttpClient<String>!
-        var observable: Observable<(String, NSURLResponse?)>!
+        var observable: Observable<(String, URLResponse?)>!
         
         beforeEach {
-            authenticatedRequest = NSURLRequest(URL: NSURL(string: "https://authenticated")!)
+            authenticatedRequest = URLRequest(url: URL(string: "https://authenticated")!)
             sessionAdapter = SessionMockAdapter(outputRequest: authenticatedRequest)
             responseAdapter = ResponseMockAdapter()
-            dispatcher = MockDispatcher(response: (data: NSData(), response: nil))
+            dispatcher = MockDispatcher(response: (data: Data(), response: nil))
             subject = HttpClient(responseAdapter: responseAdapter, requestDispatcher: dispatcher, sessionAdapter: sessionAdapter)
-            observable = subject.request(NSURLRequest())
+            observable = subject.request(request: URLRequest(url: URL(string: "")!))
         }
         
         describe("-request:") {
@@ -31,7 +31,7 @@ class HttpClientSpec: QuickSpec {
             }
             it("should adapt the response") {
                 waitUntil(action: { (done) in
-                    _ = observable.subscribeNext({ (input) in
+                    _ = observable.subscribe(onNext: { (input) in
                         expect(input.0) == "works"
                         done()
                     })
@@ -49,37 +49,37 @@ class HttpClientSpec: QuickSpec {
 
 private class MockDispatcher: UrlRequestDispatcher {
     
-    var dispatchedRequest: NSURLRequest!
-    var response: (data: NSData?, response: NSURLResponse?)
+    var dispatchedRequest: URLRequest!
+    var response: (data: Data?, response: URLResponse?)
     
     
-    init(response: (data: NSData?, response: NSURLResponse?)) {
+    init(response: (data: Data?, response: URLResponse?)) {
         self.response = response
     }
     
-    private override func dispatch(request: NSURLRequest) -> Observable<(data: NSData?, response: NSURLResponse?)> {
+    fileprivate override func dispatch(request: URLRequest) -> Observable<(data: Data?, response: URLResponse?)> {
         self.dispatchedRequest = request
         return Observable.just(self.response)
     }
     
 }
 
-private class SessionMockAdapter: Adapter<NSURLRequest, NSURLRequest> {
+private class SessionMockAdapter: Adapter<URLRequest, URLRequest> {
     
-    var outputRequest: NSURLRequest!
+    var outputRequest: URLRequest!
     
-    init(outputRequest: NSURLRequest) {
+    init(outputRequest: URLRequest) {
         self.outputRequest = outputRequest
     }
     
-    private override func adapt(input: NSURLRequest) -> NSURLRequest! {
+    fileprivate override func adapt(input: URLRequest) -> URLRequest! {
         return outputRequest
     }
     
 }
 
-private class ResponseMockAdapter: Adapter<(data: NSData?, response: NSURLResponse?), (String, NSURLResponse?)> {
-    private override func adapt(input: (data: NSData?, response: NSURLResponse?)) -> (String, NSURLResponse?)! {
+private class ResponseMockAdapter: Adapter<(data: Data?, response: URLResponse?), (String, URLResponse?)> {
+    fileprivate override func adapt(input: (data: Data?, response: URLResponse?)) -> (String, URLResponse?)! {
         return ("works", input.response)
     }
 }

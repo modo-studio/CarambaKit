@@ -8,10 +8,10 @@ class UserDefaultsObservableSpec: QuickSpec {
     override func spec() {
         
         var subject: UserDefaultsObservable<String>!
-        var userDefaults: NSUserDefaults!
+        var userDefaults: UserDefaults!
         
         beforeEach {
-            userDefaults = NSUserDefaults.standardUserDefaults()
+            userDefaults = UserDefaults.standard
             subject = UserDefaultsObservable(key: "test", userDefaults: userDefaults)
         }
         
@@ -19,14 +19,14 @@ class UserDefaultsObservableSpec: QuickSpec {
             it("should notify when the element is updated") {
                 waitUntil(action: { (done) in
                     var called: Bool = false
-                    _ = subject.rx().subscribeNext({ (next) in
+                    _ = subject.rx().subscribe(onNext: { (next) in
                         if !called {
                             expect(next) == "uuu"
                             done()
                             called = true
                         }
                     })
-                    userDefaults.setObject("uuu", forKey: "test")
+                    userDefaults.set("uuu", forKey: "test")
                     userDefaults.synchronize()
                 })
             }
@@ -34,14 +34,14 @@ class UserDefaultsObservableSpec: QuickSpec {
             it("should notify when the element is removed") {
                 waitUntil(action: { (done) in
                     var called: Bool = false
-                    _ = subject.rx().subscribeNext({ (next) in
+                    _ = subject.rx().subscribe(onNext: { (next) in
                         if !called {
                             expect(next).to(beNil())
                             done()
                             called = true
                         }
                     })
-                    userDefaults.removeObjectForKey("test")
+                    userDefaults.removeObject(forKey: "test")
                     userDefaults.synchronize()
                 })
             }

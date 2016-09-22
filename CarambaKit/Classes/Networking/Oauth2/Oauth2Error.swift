@@ -1,5 +1,5 @@
 import Foundation
 
-public enum Oauth2Error: ErrorType {
-    case AlreadyStarted
+public enum Oauth2Error: Error {
+    case alreadyStarted
 }

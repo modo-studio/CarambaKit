@@ -5,7 +5,7 @@ public class UrlRequestDispatcher {
 
     // MARK: - Attributes
 
-    let configuration: NSURLSessionConfiguration
+    let configuration: URLSessionConfiguration
 
     // MARK: - Singleton
 
@@ -13,16 +13,16 @@ public class UrlRequestDispatcher {
 
     // MARK: - Init
 
-    public init(configuration: NSURLSessionConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration()) {
+    public init(configuration: URLSessionConfiguration = URLSessionConfiguration.default) {
         self.configuration = configuration
     }
 
     // MARK: - Public
 
-    public func dispatch(request: NSURLRequest) -> Observable<(data: NSData?, response: NSURLResponse?)> {
-        let session = NSURLSession(configuration: self.configuration)
+    public func dispatch(request request: URLRequest) -> Observable<(data: Data?, response: URLResponse?)> {
+        let session = URLSession(configuration: self.configuration)
         return Observable.create { (observer) -> Disposable in
-            let dataTask = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) in
+            let dataTask = session.dataTask(with: request, completionHandler: { (data, response, error) in
                 if let error = error {
                     observer.onError(error)
                 } else {

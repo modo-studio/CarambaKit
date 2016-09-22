@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'CarambaKit'
-  s.version          = '0.0.43'
+  s.version          = '1.0.0'
   s.summary          = 'Core components used for our projects'
   s.description      = <<-DESC
 Set of Core components, including Networking, Persistence, .. that are used in our apps.s
@@ -17,14 +17,14 @@ Set of Core components, including Networking, Persistence, .. that are used in o
   
   s.subspec "Foundation" do |sp|
     sp.source_files = 'CarambaKit/Classes/Foundation/**/*'
-    sp.dependency 'RxSwift', '~> 2.6'
-    sp.dependency 'RxCocoa', '~> 2.6'
-    sp.dependency 'SwiftyJSON', '~> 2.3'
+    sp.dependency 'RxSwift', '~> 3.0.0-beta.1'
+    sp.dependency 'RxCocoa', '~> 3.0.0-beta.1'
+    sp.dependency 'SwiftyJSON', '~> 3.0'
   end
 
   s.subspec "Networking" do |sp|
     sp.dependency 'CarambaKit/Foundation'
-    sp.dependency 'KeychainSwift', '~> 3.0'
+    sp.dependency 'KeychainSwift', '~> 6.0'
     sp.source_files = 'CarambaKit/Classes/Networking/**/*'
   end
 

@@ -17,8 +17,8 @@ class JsonHttpClientSpec: QuickSpec {
         }
         
         it("should add the Accept header for accepting json responses") {
-            let request = NSURLRequest(URL: NSURL(string: "https://test.com")!)
-            _ = subject.request(request).subscribeCompleted({
+            let request = URLRequest(url: URL(string: "https://test.com")!)
+            _ = subject.request(request: request).subscribe(onCompleted: {
                 // Do nothing
             })
             let headers = dispatcher.dispatchedRequest.allHTTPHeaderFields
@@ -33,9 +33,9 @@ class JsonHttpClientSpec: QuickSpec {
 
 private class MockUrlRequestDispatcher: UrlRequestDispatcher {
     
-    var dispatchedRequest: NSURLRequest!
+    var dispatchedRequest: URLRequest!
     
-    private override func dispatch(request: NSURLRequest) -> Observable<(data: NSData?, response: NSURLResponse?)> {
+    fileprivate override func dispatch(request: URLRequest) -> Observable<(data: Data?, response: URLResponse?)> {
         self.dispatchedRequest = request
         return Observable.empty()
     }

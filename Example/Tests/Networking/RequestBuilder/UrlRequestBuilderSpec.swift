@@ -6,31 +6,31 @@ import SwiftyJSON
 @testable import CarambaKit
 
 class UrlRequestSharedExamplesConfiguration: QuickConfiguration {
-    override class func configure(configuration: Configuration) {
-        sharedExamples("built request") { (sharedExampleContext: SharedExampleContext) in
-            var request: NSURLRequest!
-            var expectedUrl: NSURL!
+    override class func configure(_ configuration: Configuration) {
+        sharedExamples("built request") { (sharedExampleContext: @escaping SharedExampleContext) in
+            var request: URLRequest!
+            var expectedUrl: URL!
             var method: String!
-            var body: [NSObject: AnyObject]!
+            var body: [AnyHashable: Any]!
             
             beforeSuite {
                 let context = sharedExampleContext()
-                request = context["request"] as! NSURLRequest
-                expectedUrl = NSURL(string: context["url"] as! String)!
+                request = context["request"] as! URLRequest
+                expectedUrl = URL(string: context["url"] as! String)!
                 method = context["method"] as! String
-                body = context["body"] as! [NSObject: AnyObject]
+                body = context["body"] as! [AnyHashable: Any]
             }
             
             it("should have the correct url") {
-                expect(request.URL) == expectedUrl
+                expect(request.url) == expectedUrl
             }
             
             it("should have the correct type") {
-                expect(request.HTTPMethod) == method
+                expect(request.httpMethod) == method
             }
             
             it("should have the correct body") {
-                let got = try! NSJSONSerialization.JSONObjectWithData(request.HTTPBody!, options: NSJSONReadingOptions.AllowFragments)
+                let got = try! JSONSerialization.jsonObject(with: request.httpBody!, options: JSONSerialization.ReadingOptions.allowFragments)
                 let expected = JSON(body)
                 expect(JSON(got)) == expected
             }
@@ -44,9 +44,9 @@ class UrlRequestBuilderSpec: QuickSpec {
         context("GET") {
             itBehavesLike("built request", sharedExampleContext: { () -> (NSDictionary) in
                 let request = UrlRequestBuilder(baseUrl: "https://api.com")
-                    .get(path: "endpoint/v1")
-                    .withParameters(["uu": "aa"])
-                    .withBody(["body2": "value1"])
+                    .get("endpoint/v1")
+                    .with(parameters: ["uu": "aa" as AnyObject])
+                    .with(body: ["body2": "value1" as AnyObject])
                     .build()
                 return ["request": request,
                     "url": "https://api.com/endpoint/v1?uu=aa",
@@ -58,9 +58,9 @@ class UrlRequestBuilderSpec: QuickSpec {
         context("POST") {
             itBehavesLike("built request", sharedExampleContext: { () -> (NSDictionary) in
                 let request = UrlRequestBuilder(baseUrl: "https://api.com")
-                    .post(path: "endpoint/v1")
-                    .withParameters(["param1": "value1"])
-                    .withBody(["body1": "value1"])
+                    .post("endpoint/v1")
+                    .with(parameters: ["param1": "value1" as AnyObject])
+                    .with(body: ["body1": "value1" as AnyObject])
                     .build()
                 return ["request": request,
                 "url": "https://api.com/endpoint/v1?param1=value1",
@@ -72,9 +72,9 @@ class UrlRequestBuilderSpec: QuickSpec {
         context("DELETE") {
             itBehavesLike("built request", sharedExampleContext: { () -> (NSDictionary) in
                 let request = UrlRequestBuilder(baseUrl: "https://api.com")
-                    .delete(path: "")
-                    .withParameters(["param1": "value1"])
-                    .withBody(["body1": "value1"])
+                    .delete("")
+                    .with(parameters: ["param1": "value1" as AnyObject])
+                    .with(body: ["body1": "value1" as AnyObject])
                     .build()
                 return ["request": request,
                     "url": "https://api.com/?param1=value1",
@@ -86,9 +86,9 @@ class UrlRequestBuilderSpec: QuickSpec {
         context("PUT") {
             itBehavesLike("built request", sharedExampleContext: { () -> (NSDictionary) in
                 let request = UrlRequestBuilder(baseUrl: "https://api.com")
-                    .put(path: "uu")
-                    .withParameters(["param1": "value1"])
-                    .withBody(["body1": "value2"])
+                    .put("uu")
+                    .with(parameters: ["param1": "value1" as AnyObject])
+                    .with(body: ["body1": "value2" as AnyObject])
                     .build()
                 return ["request": request,
                     "url": "https://api.com/uu?param1=value1",
@@ -101,9 +101,9 @@ class UrlRequestBuilderSpec: QuickSpec {
         context("PATCH") {
             itBehavesLike("built request", sharedExampleContext: { () -> (NSDictionary) in
                 let request = UrlRequestBuilder(baseUrl: "https://api.com")
-                    .patch(path: "uu")
-                    .withParameters(["param1": "value1"])
-                    .withBody(["body1": "value2"])
+                    .patch("uu")
+                    .with(parameters: ["param1": "value1" as AnyObject])
+                    .with(body: ["body1": "value2" as AnyObject])
                     .build()
                 return ["request": request,
                     "url": "https://api.com/uu?param1=value1",
