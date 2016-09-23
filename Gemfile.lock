@@ -78,12 +78,12 @@ GEM
     danger-the_coding_love (0.0.3)
       danger (~> 3.0)
       nokogiri
-    deliver (1.13.3)
+    deliver (1.14.0)
       credentials_manager (>= 0.16.0, < 1.0.0)
       fastimage (~> 1.6)
-      fastlane_core (>= 0.50.3, < 1.0.0)
+      fastlane_core (>= 0.52.0, < 1.0.0)
       plist (~> 3.1.0)
-      spaceship (>= 0.31.6, < 1.0.0)
+      spaceship (>= 0.34.1, < 1.0.0)
     domain_name (0.5.20160826)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.1.1)
@@ -172,8 +172,8 @@ GEM
       multi_json (~> 1.11)
       os (~> 0.9)
       signet (~> 0.7)
-    gym (1.9.0)
-      fastlane_core (>= 0.51.0, < 1.0.0)
+    gym (1.10.0)
+      fastlane_core (>= 0.52.0, < 1.0.0)
       plist
       rubyzip (>= 1.1.7)
       terminal-table
@@ -282,7 +282,7 @@ GEM
       fastlane_core (>= 0.52.0, < 1.0.0)
       plist (~> 3.1.0)
       xcpretty (>= 0.2.1)
-    spaceship (0.34.0)
+    spaceship (0.34.1)
       colored
       credentials_manager (>= 0.16.0)
       faraday (~> 0.9)
