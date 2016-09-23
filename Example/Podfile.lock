@@ -13,43 +13,32 @@ PODS:
   - CarambaKit/Persistence (1.0.0):
     - CarambaKit/Foundation
   - KeychainSwift (6.0.2)
-  - Mockingjay (1.2.1):
-    - Mockingjay/Core (= 1.2.1)
-    - Mockingjay/XCTest (= 1.2.1)
-  - Mockingjay/Core (1.2.1):
-    - URITemplate (~> 2.0)
-  - Mockingjay/XCTest (1.2.1):
-    - Mockingjay/Core
   - Nimble (5.0.0)
+  - OHHTTPStubs/Core (5.2.1)
+  - OHHTTPStubs/Swift (5.2.1):
+    - OHHTTPStubs/Core
   - Quick (0.9.3)
   - RxCocoa (3.0.0-beta.1):
     - RxSwift (~> 3.0.0-beta.1)
   - RxSwift (3.0.0-beta.1)
   - SwiftyJSON (3.0.0)
-  - URITemplate (2.0.0)
 
 DEPENDENCIES:
   - CarambaKit (from `../`)
   - CarambaKit/Networking (from `../`)
   - CarambaKit/Persistence (from `../`)
-  - Mockingjay (from `https://github.com/kylef/Mockingjay`, branch `kylef/swift-3.0`)
   - Nimble (~> 5.0)
+  - OHHTTPStubs/Swift (= 5.2.1)
   - Quick (from `https://github.com/quick/quick`, commit `e72d6dc86bea6b0200a54c86820a6407cf20ebb0`)
 
 EXTERNAL SOURCES:
   CarambaKit:
     :path: "../"
-  Mockingjay:
-    :branch: kylef/swift-3.0
-    :git: https://github.com/kylef/Mockingjay
   Quick:
     :commit: e72d6dc86bea6b0200a54c86820a6407cf20ebb0
     :git: https://github.com/quick/quick
 
 CHECKOUT OPTIONS:
-  Mockingjay:
-    :commit: bb7751c929a8a8810ddd416191c58c3b8c1f7591
-    :git: https://github.com/kylef/Mockingjay
   Quick:
     :commit: e72d6dc86bea6b0200a54c86820a6407cf20ebb0
     :git: https://github.com/quick/quick
@@ -57,14 +46,13 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   CarambaKit: ce4eff16367a3709c53dfc5f90e2aa222317c686
   KeychainSwift: a261364334000afa8fab0894390d5d00dd226d4c
-  Mockingjay: 8642850d8713bb81a6018f394c39f5887f91e389
   Nimble: 56fc9f5020effa2206de22c3dd910f4fb011b92f
+  OHHTTPStubs: 3a42f25c00563b71355ac73112ba2324e9e6cef4
   Quick: 31fb576b6cbb6b028cc5e0016e4366accbb346f5
   RxCocoa: 8cecf331302b8ae5381bbab1bccba4ede2eae6a8
   RxSwift: 0823e8d7969c23bfa9ddfb2afa4881e424a1a710
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
-  URITemplate: a5acb3f76c6a2338116fde88b658d83f91bbac45
 
-PODFILE CHECKSUM: d5044246b786acc05891c9500d22dce898a45066
+PODFILE CHECKSUM: ccd2ecfd3cc6deaee9a0f925601007a014df6032
 
 COCOAPODS: 1.1.0.rc.2

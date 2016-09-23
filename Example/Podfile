@@ -6,5 +6,5 @@ target 'CarambaKit_Tests' do
   pod 'CarambaKit/Persistence', :path => '../'
   pod 'Quick', :git => "https://github.com/quick/quick", :commit => "e72d6dc86bea6b0200a54c86820a6407cf20ebb0"
   pod 'Nimble', '~> 5.0'
-  pod 'Mockingjay', :git => "https://github.com/kylef/Mockingjay", :branch => "kylef/swift-3.0"
+  pod 'OHHTTPStubs/Swift', "5.2.1"
 end

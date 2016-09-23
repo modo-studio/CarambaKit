@@ -24,6 +24,7 @@ public class UrlRequestDispatcher {
         return Observable.create { (observer) -> Disposable in
             let dataTask = session.dataTask(with: request, completionHandler: { (data, response, error) in
                 if let error = error {
+                    print(error)
                     observer.onError(error)
                 } else {
                     observer.onNext((data: data, response: response))

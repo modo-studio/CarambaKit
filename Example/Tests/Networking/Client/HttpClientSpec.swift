@@ -22,7 +22,7 @@ class HttpClientSpec: QuickSpec {
             responseAdapter = ResponseMockAdapter()
             dispatcher = MockDispatcher(response: (data: Data(), response: nil))
             subject = HttpClient(responseAdapter: responseAdapter, requestDispatcher: dispatcher, sessionAdapter: sessionAdapter)
-            observable = subject.request(request: URLRequest(url: URL(string: "")!))
+            observable = subject.request(request: URLRequest(url: URL(string: "test://test")!))
         }
         
         describe("-request:") {
