@@ -7,7 +7,7 @@ lane :pods do
 end
 
 lane :tests do
-  scan(workspace: "Example/CarambaKit.xcworkspace", scheme: "CarambaKit_Tests", clean: true)
+  scan(workspace: "Example/CarambaKit.xcworkspace", scheme: "CarambaKit_Tests", clean: true, device: "iPhone 6s")
 end
 
 lane :travis do

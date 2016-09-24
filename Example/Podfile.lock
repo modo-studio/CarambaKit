@@ -14,7 +14,19 @@ PODS:
     - CarambaKit/Foundation
   - KeychainSwift (6.0.2)
   - Nimble (5.0.0)
+  - OHHTTPStubs (5.2.1):
+    - OHHTTPStubs/Default (= 5.2.1)
   - OHHTTPStubs/Core (5.2.1)
+  - OHHTTPStubs/Default (5.2.1):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (5.2.1):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (5.2.1):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (5.2.1)
   - OHHTTPStubs/Swift (5.2.1):
     - OHHTTPStubs/Core
   - Quick (0.9.3)
@@ -28,6 +40,7 @@ DEPENDENCIES:
   - CarambaKit/Networking (from `../`)
   - CarambaKit/Persistence (from `../`)
   - Nimble (~> 5.0)
+  - OHHTTPStubs (= 5.2.1)
   - OHHTTPStubs/Swift (= 5.2.1)
   - Quick (from `https://github.com/quick/quick`, commit `e72d6dc86bea6b0200a54c86820a6407cf20ebb0`)
 
@@ -53,6 +66,6 @@ SPEC CHECKSUMS:
   RxSwift: 0823e8d7969c23bfa9ddfb2afa4881e424a1a710
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
 
-PODFILE CHECKSUM: ccd2ecfd3cc6deaee9a0f925601007a014df6032
+PODFILE CHECKSUM: 381dc8d3e66aa3ef5594f8d404f3288f6689240c
 
 COCOAPODS: 1.1.0.rc.2
