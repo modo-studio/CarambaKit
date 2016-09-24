@@ -1,9 +1,10 @@
 import Foundation
 
+@available(*, deprecated, message: "Use https://github.com/carambalabs/paparajote instead")
 public protocol Oauth2Delegate: class {
 
-    func oauth2OpenUrl(url: String)
-    func oauth2DidFail(withError error: ErrorType)
-    func oauth2DidComplete(withSession session: Oauth2Session)
+    func oauth2Open(url url: String)
+    func oauth2DidFail(with error: Error)
+    func oauth2DidComplete(with session: Oauth2Session)
 
 }

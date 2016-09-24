@@ -1,5 +1,6 @@
 import Foundation
 
+@available(*, deprecated, message: "Use https://github.com/carambalabs/paparajote instead")
 public struct Oauth2Session: Equatable {
     public let accessToken: String
     public let refreshToken: String

@@ -6,22 +6,22 @@ public class JsonHttpClient: HttpClient<JSON> {
 
     // MARK: - Init
 
-    public init(requestDispatcher: UrlRequestDispatcher = UrlRequestDispatcher(), sessionAdapter: Adapter<NSURLRequest, NSURLRequest>? = nil) {
+    public init(requestDispatcher: UrlRequestDispatcher = UrlRequestDispatcher(), sessionAdapter: Adapter<URLRequest, URLRequest>? = nil) {
         super.init(responseAdapter: UrlJsonResponseAdapter.instance, requestDispatcher: requestDispatcher, sessionAdapter: sessionAdapter)
     }
 
-    override public func request(request: NSURLRequest) -> Observable<(JSON, NSURLResponse?)> {
-        return super.request(self.requestWithJSONHeaders(request))
+    override public func request(request: URLRequest) -> Observable<(JSON, URLResponse?)> {
+        return super.request(request: self.requestWithJSONHeaders(request: request))
     }
 
     // MARK: - Private
 
-    private func requestWithJSONHeaders(request: NSURLRequest) -> NSURLRequest {
-        let mutableRequest: NSMutableURLRequest = request.mutableCopy() as! NSMutableURLRequest
+    private func requestWithJSONHeaders(request: URLRequest) -> URLRequest {
+        var mutableRequest: URLRequest = request
         var headers = mutableRequest.allHTTPHeaderFields ?? [:]
         headers["Accept"] = "application/json"
         mutableRequest.allHTTPHeaderFields = headers
-        return mutableRequest.copy() as! NSURLRequest
+        return mutableRequest
     }
 
 }

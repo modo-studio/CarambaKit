@@ -34,7 +34,7 @@ class Oauth2HandlerSpec: QuickSpec {
             
             it("should notify about the session") {
                 try! subject.start()
-                subject.shouldRedirectUrl("url")
+                _ = subject.shouldRedirectUrl(url: "url")
                 expect(delegate.session) == Oauth2Session(accessToken: "access", refreshToken: "refresh")
             }
             
@@ -44,7 +44,7 @@ class Oauth2HandlerSpec: QuickSpec {
                     jsonClient = MockJsonHttpClient(error: error)
                     subject = Oauth2Handler(entity: oauth2Entity, delegate: delegate, client: jsonClient)
                     try! subject.start()
-                    subject.shouldRedirectUrl("url")
+                    _ = subject.shouldRedirectUrl(url: "url")
                     expect(delegate.error as NSError) == error
                 }
             }
@@ -62,8 +62,8 @@ private class MockOauth2Entity: Oauth2Entity {
         return "http://authentication"
     }
     
-    func authenticationRequestFromUrl(url: String) -> NSURLRequest? {
-        return NSURLRequest(URL: NSURL(string: url)!)
+    func authenticationRequestFromUrl(url: String) -> URLRequest? {
+        return URLRequest(url: URL(string: url)!)
     }
     
     func sessionFromJSON(response: JSON) throws -> Oauth2Session {
@@ -74,18 +74,18 @@ private class MockOauth2Entity: Oauth2Entity {
 private class MockOauth2Delegate: Oauth2Delegate {
     
     var openedUrl: String!
-    var error: ErrorType!
+    var error: Error!
     var session: Oauth2Session!
     
-    func oauth2OpenUrl(url: String) {
+    func oauth2Open(url: String) {
         self.openedUrl = url
     }
     
-    func oauth2DidFail(withError error: ErrorType) {
+    func oauth2DidFail(with error: Error) {
         self.error = error
     }
     
-    func oauth2DidComplete(withSession session: Oauth2Session) {
+    func oauth2DidComplete(with session: Oauth2Session) {
         self.session = session
     }
     
@@ -94,17 +94,17 @@ private class MockOauth2Delegate: Oauth2Delegate {
 private class MockJsonHttpClient: JsonHttpClient {
     
     var response: JSON!
-    var error: ErrorType!
+    var error: Error!
     
     init(response: JSON) {
         self.response = response
     }
     
-    init(error: ErrorType) {
+    init(error: Error) {
         self.error = error
     }
     
-    private override func request(request: NSURLRequest) -> Observable<(JSON, NSURLResponse?)> {
+    fileprivate override func request(request: URLRequest) -> Observable<(JSON, URLResponse?)> {
         if let error = error {
             return Observable.error(error)
         }

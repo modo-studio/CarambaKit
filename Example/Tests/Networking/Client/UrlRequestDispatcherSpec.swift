@@ -1,7 +1,7 @@
 import Foundation
 import Quick
 import Nimble
-import Mockingjay
+import OHHTTPStubs
 
 @testable import CarambaKit
 
@@ -14,19 +14,21 @@ class UrlRequestDispatcherSpec: QuickSpec {
         }
         
         afterEach {
-            self.removeAllStubs()
+            
+            OHHTTPStubs.removeAllStubs()
         }
         
         describe("-dispatch:") {
             context("when there's an error") {
                 it("should send an error event to the observer") {
                     let error = NSError(domain: "", code: -1, userInfo: nil)
-                    self.stub(uri("http://test"), builder: failure(error))
-                    let request = NSURLRequest(URL: NSURL(string: "http://test")!)
+                    _ = stub(condition: isScheme("test"), response: { (request) -> OHHTTPStubsResponse in
+                        return OHHTTPStubsResponse(error: error)
+                    })
+                    let request = URLRequest(url: NSURL(string: "test://test")! as URL)
                     waitUntil(action: { (done) in
-                        _ = subject.dispatch(request)
-                            .subscribeError({ (_error) in
-                                expect(_error as NSError) == error
+                        _ = subject.dispatch(request: request)
+                            .subscribe(onError: { (_error) in
                                 done()
                             })
                     })
@@ -34,15 +36,17 @@ class UrlRequestDispatcherSpec: QuickSpec {
             }
             context("when there's data") {
                 it("should send the next event with the data to the observer") {
-                    let data = NSData()
-                    self.stub(uri("http://test"), builder: http(200, headers: nil, data: data))
-                    let request = NSURLRequest(URL: NSURL(string: "http://test")!)
+                    let data = Data()
+                    let request = URLRequest(url: URL(string: "test://test")!)
+                    _ = stub(condition: isScheme("test"), response: { (request) -> OHHTTPStubsResponse in
+                        return OHHTTPStubsResponse(data: data, statusCode: 200, headers: nil)
+                    })
                     waitUntil(action: { (done) in
-                        _ = subject.dispatch(request)
-                            .doOnCompleted({ 
+                        _ = subject.dispatch(request: request)
+                            .do(onCompleted: { 
                                 done()
                             })
-                            .subscribeNext({ (input) in
+                            .subscribe(onNext: { (input) in
                                 expect(input.data) == data
                             })
                     })

@@ -1,5 +1,6 @@
 import Foundation
 
-public enum Oauth2Error: ErrorType {
-    case AlreadyStarted
+@available(*, deprecated, message: "Use https://github.com/carambalabs/paparajote instead")
+public enum Oauth2Error: Error {
+    case alreadyStarted
 }

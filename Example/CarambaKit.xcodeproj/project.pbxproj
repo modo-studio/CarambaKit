@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		032B941A9F17BC557D5AC363 /* Pods_CarambaKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E46EB39E36883F242BBC5E14 /* Pods_CarambaKit_Tests.framework */; };
+		019AFCD79EC257C22F3CCDE8 /* Pods_CarambaKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 963FC49808D3094B4E80DAEE /* Pods_CarambaKit_Tests.framework */; };
 		236FE5DE1D4913090071964D /* HttpClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE5D61D4913090071964D /* HttpClientSpec.swift */; };
 		236FE5DF1D4913090071964D /* JsonHttpClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE5D71D4913090071964D /* JsonHttpClientSpec.swift */; };
 		236FE5E01D4913090071964D /* UrlJsonResponseAdapterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE5D81D4913090071964D /* UrlJsonResponseAdapterSpec.swift */; };
@@ -21,8 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0088FFE3F11D49E2E8CBE231 /* Pods-CarambaKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarambaKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarambaKit_Tests/Pods-CarambaKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		106B568613CF427A25D3D11C /* Pods_Core_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		236FE5D61D4913090071964D /* HttpClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClientSpec.swift; sourceTree = "<group>"; };
 		236FE5D71D4913090071964D /* JsonHttpClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonHttpClientSpec.swift; sourceTree = "<group>"; };
 		236FE5D81D4913090071964D /* UrlJsonResponseAdapterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlJsonResponseAdapterSpec.swift; sourceTree = "<group>"; };
@@ -33,18 +31,14 @@
 		236FE5E91D4913910071964D /* UrlRequestBuilderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlRequestBuilderSpec.swift; sourceTree = "<group>"; };
 		239364F21D4B6EDF00C3F5A6 /* SessionRepositorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionRepositorySpec.swift; sourceTree = "<group>"; };
 		23ED6E9B1D38279E00A5F2A2 /* UserDefaultsObservableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsObservableSpec.swift; sourceTree = "<group>"; };
-		2BA82767E7F710C8ADA557C9 /* Pods-Core_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Core_Tests/Pods-Core_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		468D79AA85FE60538FA7DA29 /* Pods-CarambaKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarambaKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarambaKit_Tests/Pods-CarambaKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		4B9452AAB20CE33E9E5BF91B /* Pods-Core_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Core_Example/Pods-Core_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* CarambaKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarambaKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		963FC49808D3094B4E80DAEE /* Pods_CarambaKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarambaKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB613F6EE87B4BFEB1DB6264 /* Pods-CarambaKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarambaKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarambaKit_Tests/Pods-CarambaKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF179A87BA0EF7634C9838FB /* Core.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Core.podspec; path = ../Core.podspec; sourceTree = "<group>"; };
-		C0C1362F32BCA2E6738D6723 /* Pods-Core_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Core_Tests/Pods-Core_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		CCA1BE979F535E3E7F81058B /* Pods_Core_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF822DB45FA80E0D2C74665 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		E3E2E524A8A2C0D147AA9356 /* Pods-Core_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Core_Example/Pods-Core_Example.release.xcconfig"; sourceTree = "<group>"; };
-		E46EB39E36883F242BBC5E14 /* Pods_CarambaKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarambaKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA66E70EF371D2B2BD4257E3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F0AC31413E49E34234A201E7 /* Pods-CarambaKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarambaKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarambaKit_Tests/Pods-CarambaKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,36 +46,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				032B941A9F17BC557D5AC363 /* Pods_CarambaKit_Tests.framework in Frameworks */,
+				019AFCD79EC257C22F3CCDE8 /* Pods_CarambaKit_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0646163A72403E4D6382A29C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				106B568613CF427A25D3D11C /* Pods_Core_Example.framework */,
-				CCA1BE979F535E3E7F81058B /* Pods_Core_Tests.framework */,
-				E46EB39E36883F242BBC5E14 /* Pods_CarambaKit_Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		167849163E21A5AD6037312E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4B9452AAB20CE33E9E5BF91B /* Pods-Core_Example.debug.xcconfig */,
-				E3E2E524A8A2C0D147AA9356 /* Pods-Core_Example.release.xcconfig */,
-				2BA82767E7F710C8ADA557C9 /* Pods-Core_Tests.debug.xcconfig */,
-				C0C1362F32BCA2E6738D6723 /* Pods-Core_Tests.release.xcconfig */,
-				468D79AA85FE60538FA7DA29 /* Pods-CarambaKit_Tests.debug.xcconfig */,
-				0088FFE3F11D49E2E8CBE231 /* Pods-CarambaKit_Tests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		23433B281D3646400018405C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,8 +123,8 @@
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				167849163E21A5AD6037312E /* Pods */,
-				0646163A72403E4D6382A29C /* Frameworks */,
+				B04063294A4329C407ED3B7B /* Pods */,
+				DC48F43BCD6C8293F4F23846 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,6 +164,23 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		B04063294A4329C407ED3B7B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB613F6EE87B4BFEB1DB6264 /* Pods-CarambaKit_Tests.debug.xcconfig */,
+				F0AC31413E49E34234A201E7 /* Pods-CarambaKit_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DC48F43BCD6C8293F4F23846 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				963FC49808D3094B4E80DAEE /* Pods_CarambaKit_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,13 +188,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "CarambaKit_Tests" */;
 			buildPhases = (
-				26125EA5B26C138845A87651 /* [CP] Check Pods Manifest.lock */,
+				CAB9B043C3C6018864402E01 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				5315CF5E616694E27CD51458 /* [CP] Embed Pods Frameworks */,
-				AD025F9A21AD97A3CF31E664 /* [CP] Copy Pods Resources */,
 				238F9DE81D497F7400C1BB29 /* Swiftlint */,
+				901795269E16E1837D8E2AA0 /* [CP] Embed Pods Frameworks */,
+				18CF85E72CCCC16772CEA05B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -224,11 +212,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -262,6 +251,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		18CF85E72CCCC16772CEA05B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarambaKit_Tests/Pods-CarambaKit_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		238F9DE81D497F7400C1BB29 /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -276,22 +280,7 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint lint --config \"../.swiftlint.yml\"\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
-		26125EA5B26C138845A87651 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		5315CF5E616694E27CD51458 /* [CP] Embed Pods Frameworks */ = {
+		901795269E16E1837D8E2AA0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -306,19 +295,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarambaKit_Tests/Pods-CarambaKit_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AD025F9A21AD97A3CF31E664 /* [CP] Copy Pods Resources */ = {
+		CAB9B043C3C6018864402E01 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarambaKit_Tests/Pods-CarambaKit_Tests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -357,8 +346,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -402,8 +393,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -422,13 +415,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 468D79AA85FE60538FA7DA29 /* Pods-CarambaKit_Tests.debug.xcconfig */;
+			baseConfigurationReference = AB613F6EE87B4BFEB1DB6264 /* Pods-CarambaKit_Tests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -444,12 +438,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = CarambaKit_Tests;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0088FFE3F11D49E2E8CBE231 /* Pods-CarambaKit_Tests.release.xcconfig */;
+			baseConfigurationReference = F0AC31413E49E34234A201E7 /* Pods-CarambaKit_Tests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -460,6 +455,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = CarambaKit_Tests;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

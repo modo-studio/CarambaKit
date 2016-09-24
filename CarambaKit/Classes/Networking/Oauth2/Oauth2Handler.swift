@@ -1,6 +1,7 @@
 import Foundation
 import RxSwift
 
+@available(*, deprecated, message: "Use https://github.com/carambalabs/paparajote instead")
 public class Oauth2Handler {
 
     // MARK: - Attributes
@@ -22,36 +23,36 @@ public class Oauth2Handler {
 
     public func start() throws {
         if self.active {
-            throw Oauth2Error.AlreadyStarted
+            throw Oauth2Error.alreadyStarted
         }
         self.active = true
-        self.delegate?.oauth2OpenUrl(self.entity.authorizationUrl())
+        self.delegate?.oauth2Open(url: self.entity.authorizationUrl())
     }
 
     public func shouldRedirectUrl(url: String) -> Bool {
-        let request = self.entity.authenticationRequestFromUrl(url)
+        let request = self.entity.authenticationRequestFromUrl(url: url)
         if let request = request {
-            self.performAuthentication(request)
+            self.performAuthentication(request: request)
         }
         return request == nil
     }
 
     // MARK: - Private
 
-    private func performAuthentication(request: NSURLRequest) {
-        _ = self.client.request(request)
+    private func performAuthentication(request: URLRequest) {
+        _ = self.client.request(request: request)
             .doOnNext { [weak self] (json, response) in
                 do {
-                    if let session = try self?.entity.sessionFromJSON(json) {
-                        self?.delegate?.oauth2DidComplete(withSession: session)
+                    if let session = try self?.entity.sessionFromJSON(response: json) {
+                        self?.delegate?.oauth2DidComplete(with: session)
                     }
                 } catch {
-                    self?.delegate?.oauth2DidFail(withError: error)
+                    self?.delegate?.oauth2DidFail(with: error)
                 }
                 self?.active = false
             }
             .doOnError { [weak self] (error) in
-                self?.delegate?.oauth2DidFail(withError: error)
+                self?.delegate?.oauth2DidFail(with: error)
                 self?.active = false
             }
             .subscribe()
