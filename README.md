@@ -32,14 +32,6 @@ client.request(request).subscribeNext { response in
 }
 ```
 
-### Oauth2
-
-1. Create an entity that conforms the protocol `Oauth2Entity` implementing the required methods.
-2. Create an instance of the handler passing the defined entity and the delegate of the handler.
-3. Connect the `Webview` delegate with the handler using the method `shouldRedirectUrl`.
-4. Call `start` on the handler to start the Oauth2 flow.
-5. :tada:
-
 ### SessionRepository
 
 Fetch, store, and clear a session from the Keychain:
