@@ -29,7 +29,7 @@ PODS:
   - OHHTTPStubs/OHPathHelpers (5.2.1)
   - OHHTTPStubs/Swift (5.2.1):
     - OHHTTPStubs/Core
-  - Quick (0.9.3)
+  - Quick (0.10.0)
   - RxCocoa (3.0.0-beta.1):
     - RxSwift (~> 3.0.0-beta.1)
   - RxSwift (3.0.0-beta.1)
@@ -42,30 +42,22 @@ DEPENDENCIES:
   - Nimble (~> 5.0)
   - OHHTTPStubs (= 5.2.1)
   - OHHTTPStubs/Swift (= 5.2.1)
-  - Quick (from `https://github.com/quick/quick`, commit `e72d6dc86bea6b0200a54c86820a6407cf20ebb0`)
+  - Quick (~> 0.10)
 
 EXTERNAL SOURCES:
   CarambaKit:
     :path: "../"
-  Quick:
-    :commit: e72d6dc86bea6b0200a54c86820a6407cf20ebb0
-    :git: https://github.com/quick/quick
-
-CHECKOUT OPTIONS:
-  Quick:
-    :commit: e72d6dc86bea6b0200a54c86820a6407cf20ebb0
-    :git: https://github.com/quick/quick
 
 SPEC CHECKSUMS:
   CarambaKit: ce4eff16367a3709c53dfc5f90e2aa222317c686
   KeychainSwift: a261364334000afa8fab0894390d5d00dd226d4c
   Nimble: 56fc9f5020effa2206de22c3dd910f4fb011b92f
   OHHTTPStubs: 3a42f25c00563b71355ac73112ba2324e9e6cef4
-  Quick: 31fb576b6cbb6b028cc5e0016e4366accbb346f5
+  Quick: 5d290df1c69d5ee2f0729956dcf0fd9a30447eaa
   RxCocoa: 8cecf331302b8ae5381bbab1bccba4ede2eae6a8
   RxSwift: 0823e8d7969c23bfa9ddfb2afa4881e424a1a710
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
 
-PODFILE CHECKSUM: 381dc8d3e66aa3ef5594f8d404f3288f6689240c
+PODFILE CHECKSUM: 27f7097165f5897efa575265864cabf75c88a510
 
 COCOAPODS: 1.1.0.rc.2
