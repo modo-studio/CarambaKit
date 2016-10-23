@@ -2,7 +2,7 @@ import Foundation
 import RxSwift
 import SwiftyJSON
 
-public class JsonHttpClient: HttpClient<JSON> {
+open class JsonHttpClient: HttpClient<JSON> {
 
     // MARK: - Init
 
