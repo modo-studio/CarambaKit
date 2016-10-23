@@ -1,7 +1,7 @@
 import Foundation
 import SwiftyJSON
 
-public class UrlJsonResponseAdapter: Adapter<(data: Data?, response: URLResponse?), (JSON, URLResponse?)> {
+open class UrlJsonResponseAdapter: Adapter<(data: Data?, response: URLResponse?), (JSON, URLResponse?)> {
 
     // MARK: - Singleton
 
