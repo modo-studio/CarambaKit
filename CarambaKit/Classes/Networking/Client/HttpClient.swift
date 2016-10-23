@@ -1,7 +1,7 @@
 import Foundation
 import RxSwift
 
-public class HttpClient<T> {
+open class HttpClient<T> {
 
     // MARK: - Attributes
 
@@ -21,7 +21,7 @@ public class HttpClient<T> {
 
     // MARK: - Init
 
-    public func request(request: URLRequest) -> Observable<(T, URLResponse?)> {
+    open func request(request: URLRequest) -> Observable<(T, URLResponse?)> {
         var authenticatedRequest = self.sessionAdapter?.adapt(request) ?? request
         return self.requestDispatcher.dispatch(request: authenticatedRequest)
             .map({self.responseAdapter.adapt($0)!})
