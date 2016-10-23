@@ -1,7 +1,7 @@
 import Foundation
 import RxSwift
 
-public class UrlRequestDispatcher {
+open class UrlRequestDispatcher {
 
     // MARK: - Attributes
 
