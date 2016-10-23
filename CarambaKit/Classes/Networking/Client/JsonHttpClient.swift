@@ -10,7 +10,7 @@ open class JsonHttpClient: HttpClient<JSON> {
         super.init(responseAdapter: UrlJsonResponseAdapter.instance, requestDispatcher: requestDispatcher, sessionAdapter: sessionAdapter)
     }
 
-    override public func request(request: URLRequest) -> Observable<(JSON, URLResponse?)> {
+    override open func request(request: URLRequest) -> Observable<(JSON, URLResponse?)> {
         return super.request(request: self.requestWithJSONHeaders(request: request))
     }
 

@@ -11,7 +11,7 @@ open class HttpClient<T> {
 
     // MARK: - Init
 
-    open init(responseAdapter: Adapter<(data: Data?, response: URLResponse?), (T, URLResponse?)>,
+    public init(responseAdapter: Adapter<(data: Data?, response: URLResponse?), (T, URLResponse?)>,
                 requestDispatcher: UrlRequestDispatcher = UrlRequestDispatcher(),
                 sessionAdapter: Adapter<URLRequest, URLRequest>? = nil) {
         self.responseAdapter = responseAdapter
