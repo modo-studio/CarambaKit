@@ -22,7 +22,7 @@ open class HttpClient<T> {
     // MARK: - Init
 
     open func request(request: URLRequest) -> Observable<(T, URLResponse?)> {
-        var authenticatedRequest = self.sessionAdapter?.adapt(request) ?? request
+        let authenticatedRequest = self.sessionAdapter?.adapt(request) ?? request
         return self.requestDispatcher.dispatch(request: authenticatedRequest)
             .map({self.responseAdapter.adapt($0)!})
     }

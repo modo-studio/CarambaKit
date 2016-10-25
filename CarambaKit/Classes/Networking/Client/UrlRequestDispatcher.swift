@@ -19,7 +19,7 @@ open class UrlRequestDispatcher {
 
     // MARK: - Public
 
-    public func dispatch(request request: URLRequest) -> Observable<(data: Data?, response: URLResponse?)> {
+    public func dispatch(request: URLRequest) -> Observable<(data: Data?, response: URLResponse?)> {
         let session = URLSession(configuration: self.configuration)
         return Observable.create { (observer) -> Disposable in
             let dataTask = session.dataTask(with: request, completionHandler: { (data, response, error) in
@@ -32,9 +32,9 @@ open class UrlRequestDispatcher {
                 }
             })
             dataTask.resume()
-            return AnonymousDisposable {
+            return Disposables.create(with: { 
                 dataTask.cancel()
-            }
+            })
         }
     }
 
