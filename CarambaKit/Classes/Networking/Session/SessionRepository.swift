@@ -17,7 +17,7 @@ public class SessionRepository {
 
     // MARK: - Public
 
-    public func save(session session: Session) {
+    public func save(session: Session) {
         let accessToken = session.accessToken
         let refreshToken = session.refreshToken
         self.keychain.set(accessToken, forKey: self.accessTokenKey())

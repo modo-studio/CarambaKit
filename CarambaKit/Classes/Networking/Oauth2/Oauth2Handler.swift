@@ -41,7 +41,7 @@ public class Oauth2Handler {
 
     private func performAuthentication(request: URLRequest) {
         _ = self.client.request(request: request)
-            .doOnNext { [weak self] (json, response) in
+            .do(onNext: { [weak self] (json, response) in
                 do {
                     if let session = try self?.entity.sessionFromJSON(response: json) {
                         self?.delegate?.oauth2DidComplete(with: session)
@@ -50,11 +50,10 @@ public class Oauth2Handler {
                     self?.delegate?.oauth2DidFail(with: error)
                 }
                 self?.active = false
-            }
-            .doOnError { [weak self] (error) in
+            }, onError: { [weak self] (error) in
                 self?.delegate?.oauth2DidFail(with: error)
                 self?.active = false
-            }
+            })
             .subscribe()
     }
 

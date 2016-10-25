@@ -17,8 +17,8 @@ Set of Core components, including Networking, Persistence and much more that are
 
   s.subspec "Foundation" do |sp|
     sp.source_files = 'CarambaKit/Classes/Foundation/**/*'
-    sp.dependency 'RxSwift', '~> 3.0.0-beta.1'
-    sp.dependency 'RxCocoa', '~> 3.0.0-beta.1'
+    sp.dependency 'RxSwift', '~> 3.0.0'
+    sp.dependency 'RxCocoa', '~> 3.0.0'
     sp.dependency 'SwiftyJSON', '~> 3.0'
   end
 

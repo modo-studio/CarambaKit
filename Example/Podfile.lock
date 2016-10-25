@@ -1,19 +1,19 @@
 PODS:
-  - CarambaKit (1.0.0):
-    - CarambaKit/Foundation (= 1.0.0)
-    - CarambaKit/Networking (= 1.0.0)
-    - CarambaKit/Persistence (= 1.0.0)
-  - CarambaKit/Foundation (1.0.0):
-    - RxCocoa (~> 3.0.0-beta.1)
-    - RxSwift (~> 3.0.0-beta.1)
+  - CarambaKit (1.0.3):
+    - CarambaKit/Foundation (= 1.0.3)
+    - CarambaKit/Networking (= 1.0.3)
+    - CarambaKit/Persistence (= 1.0.3)
+  - CarambaKit/Foundation (1.0.3):
+    - RxCocoa (~> 3.0.0)
+    - RxSwift (~> 3.0.0)
     - SwiftyJSON (~> 3.0)
-  - CarambaKit/Networking (1.0.0):
+  - CarambaKit/Networking (1.0.3):
     - CarambaKit/Foundation
     - KeychainSwift (~> 6.0)
-  - CarambaKit/Persistence (1.0.0):
+  - CarambaKit/Persistence (1.0.3):
     - CarambaKit/Foundation
   - KeychainSwift (6.0.2)
-  - Nimble (5.0.0)
+  - Nimble (5.1.0)
   - OHHTTPStubs (5.2.1):
     - OHHTTPStubs/Default (= 5.2.1)
   - OHHTTPStubs/Core (5.2.1)
@@ -30,10 +30,10 @@ PODS:
   - OHHTTPStubs/Swift (5.2.1):
     - OHHTTPStubs/Core
   - Quick (0.10.0)
-  - RxCocoa (3.0.0-beta.1):
-    - RxSwift (~> 3.0.0-beta.1)
-  - RxSwift (3.0.0-beta.1)
-  - SwiftyJSON (3.0.0)
+  - RxCocoa (3.0.0):
+    - RxSwift (~> 3.0)
+  - RxSwift (3.0.0)
+  - SwiftyJSON (3.1.1)
 
 DEPENDENCIES:
   - CarambaKit (from `../`)
@@ -49,15 +49,15 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CarambaKit: ce4eff16367a3709c53dfc5f90e2aa222317c686
+  CarambaKit: feb7e08c138b4aa35c1c016ecb36cd1f97b2bc5f
   KeychainSwift: a261364334000afa8fab0894390d5d00dd226d4c
-  Nimble: 56fc9f5020effa2206de22c3dd910f4fb011b92f
+  Nimble: 5ea121a2eda60440287054cde077fc0ad22227b3
   OHHTTPStubs: 3a42f25c00563b71355ac73112ba2324e9e6cef4
   Quick: 5d290df1c69d5ee2f0729956dcf0fd9a30447eaa
-  RxCocoa: 8cecf331302b8ae5381bbab1bccba4ede2eae6a8
-  RxSwift: 0823e8d7969c23bfa9ddfb2afa4881e424a1a710
-  SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
+  RxCocoa: 0a2f3ae381cf16f4021a4cee7a4420f83058a965
+  RxSwift: a930cd662f5b4a7ca9dc3518585dba91dadf497c
+  SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
 PODFILE CHECKSUM: 27f7097165f5897efa575265864cabf75c88a510
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.1.1
