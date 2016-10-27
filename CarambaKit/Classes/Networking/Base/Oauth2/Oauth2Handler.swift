@@ -1,5 +1,5 @@
 import Foundation
-import RxSwift
+import Result
 
 @available(*, deprecated, message: "Use https://github.com/carambalabs/paparajote instead")
 public class Oauth2Handler {
@@ -40,21 +40,28 @@ public class Oauth2Handler {
     // MARK: - Private
 
     private func performAuthentication(request: URLRequest) {
-        _ = self.client.request(request: request)
-            .do(onNext: { [weak self] (json, response) in
-                do {
-                    if let session = try self?.entity.sessionFromJSON(response: json) {
-                        self?.delegate?.oauth2DidComplete(with: session)
-                    }
-                } catch {
-                    self?.delegate?.oauth2DidFail(with: error)
-                }
-                self?.active = false
-            }, onError: { [weak self] (error) in
-                self?.delegate?.oauth2DidFail(with: error)
-                self?.active = false
-            })
-            .subscribe()
+        self.client.request(request: request) { response in
+            if let value = response.value {
+                
+            } else if let error = response.error {
+                
+            }
+        }
+//        _ = self.client.request(request: request)
+//            .do(onNext: { [weak self] (json, response) in
+//                do {
+//                    if let session = try self?.entity.sessionFromJSON(response: json) {
+//                        self?.delegate?.oauth2DidComplete(with: session)
+//                    }
+//                } catch {
+//                    self?.delegate?.oauth2DidFail(with: error)
+//                }
+//                self?.active = false
+//            }, onError: { [weak self] (error) in
+//                self?.delegate?.oauth2DidFail(with: error)
+//                self?.active = false
+//            })
+//            .subscribe()
     }
 
 }

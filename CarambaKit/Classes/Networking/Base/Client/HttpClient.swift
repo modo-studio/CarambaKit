@@ -1,5 +1,5 @@
 import Foundation
-import RxSwift
+import Result
 
 open class HttpClient<T> {
 
@@ -7,11 +7,11 @@ open class HttpClient<T> {
 
     private let requestDispatcher: UrlRequestDispatcher
     private let sessionAdapter: Adapter<URLRequest, URLRequest>?
-    private let responseAdapter: Adapter<(data: Data?, response: URLResponse?), (T, URLResponse?)>
+    private let responseAdapter: Adapter<Result<Data, NSError>, Result<T, NSError>>
 
     // MARK: - Init
 
-    public init(responseAdapter: Adapter<(data: Data?, response: URLResponse?), (T, URLResponse?)>,
+    public init(responseAdapter: Adapter<Result<Data, NSError>, Result<T, NSError>>,
                 requestDispatcher: UrlRequestDispatcher = UrlRequestDispatcher(),
                 sessionAdapter: Adapter<URLRequest, URLRequest>? = nil) {
         self.responseAdapter = responseAdapter
@@ -21,10 +21,11 @@ open class HttpClient<T> {
 
     // MARK: - Init
 
-    open func request(request: URLRequest) -> Observable<(T, URLResponse?)> {
+    open func request(request: URLRequest, completion: @escaping (Result<T, NSError>) -> ()) {
         let authenticatedRequest = self.sessionAdapter?.adapt(request) ?? request
-        return self.requestDispatcher.dispatch(request: authenticatedRequest)
-            .map({self.responseAdapter.adapt($0)!})
+        self.requestDispatcher.dispatch(request: authenticatedRequest) { (result) in
+            completion(self.responseAdapter.adapt(result))
+        }
     }
 
 }

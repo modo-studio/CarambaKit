@@ -170,10 +170,10 @@ public enum UrlParameterEncoding {
         case .custom(let closure):
             (mutableURLRequest, encodingError) = closure(mutableURLRequest, parameters)
         }
-        
+    
         return (mutableURLRequest, encodingError)
     }
-    
+
     /**
      Creates percent-escaped, URL encoded query string components from the given key-value pair using recursion.
      

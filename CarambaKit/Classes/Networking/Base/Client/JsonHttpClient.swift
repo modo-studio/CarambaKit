@@ -1,17 +1,19 @@
 import Foundation
-import RxSwift
 import SwiftyJSON
+import Result
 
 open class JsonHttpClient: HttpClient<JSON> {
 
     // MARK: - Init
 
-    public init(requestDispatcher: UrlRequestDispatcher = UrlRequestDispatcher(), sessionAdapter: Adapter<URLRequest, URLRequest>? = nil) {
+    public init(requestDispatcher: UrlRequestDispatcher = UrlRequestDispatcher(),
+                sessionAdapter: Adapter<URLRequest, URLRequest>? = nil) {
         super.init(responseAdapter: UrlJsonResponseAdapter.instance, requestDispatcher: requestDispatcher, sessionAdapter: sessionAdapter)
     }
-
-    override open func request(request: URLRequest) -> Observable<(JSON, URLResponse?)> {
-        return super.request(request: self.requestWithJSONHeaders(request: request))
+    
+    open override func request(request: URLRequest, completion: @escaping (Result<JSON, NSError>) -> ()) {
+        return super.request(request: self.requestWithJSONHeaders(request: request),
+                             completion: completion)
     }
 
     // MARK: - Private
