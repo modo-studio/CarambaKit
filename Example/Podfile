@@ -3,7 +3,6 @@ use_frameworks!
 target 'CarambaKit_Tests' do
   pod 'CarambaKit', :path => '../'
   pod 'CarambaKit/Networking/Rx', :path => '../'
-  pod 'CarambaKit/Persistence/Rx', :path => '../'
   pod 'Quick', "~> 0.10"
   pod 'Nimble', '~> 5.0'
   pod 'OHHTTPStubs', "5.2.1"

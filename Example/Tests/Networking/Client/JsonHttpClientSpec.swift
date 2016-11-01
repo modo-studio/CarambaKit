@@ -1,7 +1,7 @@
 import Foundation
 import Quick
 import Nimble
-import RxSwift
+import Result
 
 @testable import CarambaKit
 
@@ -18,8 +18,8 @@ class JsonHttpClientSpec: QuickSpec {
         
         it("should add the Accept header for accepting json responses") {
             let request = URLRequest(url: URL(string: "https://test.com")!)
-            _ = subject.request(request: request).subscribe(onCompleted: {
-                // Do nothing
+            subject.request(request: request, completion: { (result) in
+                
             })
             let headers = dispatcher.dispatchedRequest.allHTTPHeaderFields
             expect(headers!["Accept"]) == "application/json"
@@ -35,9 +35,8 @@ private class MockUrlRequestDispatcher: UrlRequestDispatcher {
     
     var dispatchedRequest: URLRequest!
     
-    fileprivate override func dispatch(request: URLRequest) -> Observable<(data: Data?, response: URLResponse?)> {
+    fileprivate override func dispatch(request: URLRequest, completion: @escaping (Result<Data, NSError>) -> Void) {
         self.dispatchedRequest = request
-        return Observable.empty()
     }
     
 }

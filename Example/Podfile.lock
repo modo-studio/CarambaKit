@@ -2,9 +2,9 @@ PODS:
   - CarambaKit (1.0.4):
     - CarambaKit/Foundation (= 1.0.4)
     - CarambaKit/Networking (= 1.0.4)
-    - CarambaKit/Persistence (= 1.0.4)
   - CarambaKit/Foundation (1.0.4):
     - Result (~> 3.0)
+    - SwiftyJSON (~> 3.0)
   - CarambaKit/Networking (1.0.4):
     - CarambaKit/Foundation
     - CarambaKit/Networking/Rx (= 1.0.4)
@@ -12,17 +12,7 @@ PODS:
   - CarambaKit/Networking/Rx (1.0.4):
     - CarambaKit/Foundation
     - KeychainSwift (~> 6.0)
-    - RxCocoa (~> 3.0.0)
     - RxSwift (~> 3.0.0)
-    - SwiftyJSON (~> 3.0)
-  - CarambaKit/Persistence (1.0.4):
-    - CarambaKit/Foundation
-    - CarambaKit/Persistence/Rx (= 1.0.4)
-  - CarambaKit/Persistence/Rx (1.0.4):
-    - CarambaKit/Foundation
-    - RxCocoa (~> 3.0.0)
-    - RxSwift (~> 3.0.0)
-    - SwiftyJSON (~> 3.0)
   - KeychainSwift (6.0.2)
   - Nimble (5.1.0)
   - OHHTTPStubs (5.2.1):
@@ -42,15 +32,12 @@ PODS:
     - OHHTTPStubs/Core
   - Quick (0.10.0)
   - Result (3.0.0)
-  - RxCocoa (3.0.0):
-    - RxSwift (~> 3.0)
   - RxSwift (3.0.0)
   - SwiftyJSON (3.1.1)
 
 DEPENDENCIES:
   - CarambaKit (from `../`)
   - CarambaKit/Networking/Rx (from `../`)
-  - CarambaKit/Persistence/Rx (from `../`)
   - Nimble (~> 5.0)
   - OHHTTPStubs (= 5.2.1)
   - OHHTTPStubs/Swift (= 5.2.1)
@@ -61,16 +48,15 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CarambaKit: 7e5647e9b956b66cb9c65e0e83503146ff247a88
+  CarambaKit: 456a7f87d20c1efa1793b2b09cc6ac6412ee23eb
   KeychainSwift: a261364334000afa8fab0894390d5d00dd226d4c
   Nimble: 5ea121a2eda60440287054cde077fc0ad22227b3
   OHHTTPStubs: 3a42f25c00563b71355ac73112ba2324e9e6cef4
   Quick: 5d290df1c69d5ee2f0729956dcf0fd9a30447eaa
   Result: 1b3e431f37cbcd3ad89c6aa9ab0ae55515fae3b6
-  RxCocoa: 0a2f3ae381cf16f4021a4cee7a4420f83058a965
   RxSwift: a930cd662f5b4a7ca9dc3518585dba91dadf497c
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-PODFILE CHECKSUM: 8afbe4cf7ea6b1b8227292b4f4bad2e1f7eb9efd
+PODFILE CHECKSUM: 3c528eae6666fcd207367db81738ee6d461cc859
 
 COCOAPODS: 1.1.1

@@ -2,6 +2,7 @@ import Foundation
 import Quick
 import Nimble
 import OHHTTPStubs
+import Result
 
 @testable import CarambaKit
 
@@ -27,10 +28,11 @@ class UrlRequestDispatcherSpec: QuickSpec {
                     })
                     let request = URLRequest(url: NSURL(string: "test://test")! as URL)
                     waitUntil(action: { (done) in
-                        _ = subject.dispatch(request: request)
-                            .subscribe(onError: { (_error) in
+                        subject.dispatch(request: request, completion: { (result) in
+                            if let error = result.error {
                                 done()
-                            })
+                            }
+                        })
                     })
                 }
             }
@@ -42,13 +44,10 @@ class UrlRequestDispatcherSpec: QuickSpec {
                         return OHHTTPStubsResponse(data: data, statusCode: 200, headers: nil)
                     })
                     waitUntil(action: { (done) in
-                        _ = subject.dispatch(request: request)
-                            .do(onCompleted: { 
-                                done()
-                            })
-                            .subscribe(onNext: { (input) in
-                                expect(input.data) == data
-                            })
+                        subject.dispatch(request: request, completion: { (result) in
+                            expect(result.value) == data
+                            done()
+                        })
                     })
                 }
             }

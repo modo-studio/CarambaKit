@@ -13,11 +13,9 @@
 		236FE5E01D4913090071964D /* UrlJsonResponseAdapterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE5D81D4913090071964D /* UrlJsonResponseAdapterSpec.swift */; };
 		236FE5E31D4913090071964D /* UrlRequestDispatcherSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE5DB1D4913090071964D /* UrlRequestDispatcherSpec.swift */; };
 		236FE5E41D4913090071964D /* UrlRequestTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE5DC1D4913090071964D /* UrlRequestTypeSpec.swift */; };
-		236FE5E61D4913120071964D /* Oauth2HandlerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE5E51D4913120071964D /* Oauth2HandlerSpec.swift */; };
 		236FE5EA1D4913910071964D /* UrlParameterEncodingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE5E81D4913910071964D /* UrlParameterEncodingSpec.swift */; };
 		236FE5EB1D4913910071964D /* UrlRequestBuilderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FE5E91D4913910071964D /* UrlRequestBuilderSpec.swift */; };
 		239364F31D4B6EDF00C3F5A6 /* SessionRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239364F21D4B6EDF00C3F5A6 /* SessionRepositorySpec.swift */; };
-		23ED6E9C1D38279E00A5F2A2 /* UserDefaultsObservableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ED6E9B1D38279E00A5F2A2 /* UserDefaultsObservableSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +28,6 @@
 		236FE5E81D4913910071964D /* UrlParameterEncodingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlParameterEncodingSpec.swift; sourceTree = "<group>"; };
 		236FE5E91D4913910071964D /* UrlRequestBuilderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlRequestBuilderSpec.swift; sourceTree = "<group>"; };
 		239364F21D4B6EDF00C3F5A6 /* SessionRepositorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionRepositorySpec.swift; sourceTree = "<group>"; };
-		23ED6E9B1D38279E00A5F2A2 /* UserDefaultsObservableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsObservableSpec.swift; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* CarambaKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarambaKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		963FC49808D3094B4E80DAEE /* Pods_CarambaKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarambaKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,22 +98,6 @@
 			path = Session;
 			sourceTree = "<group>";
 		};
-		23ED6E991D38279400A5F2A2 /* Persistence */ = {
-			isa = PBXGroup;
-			children = (
-				23ED6E9A1D38279400A5F2A2 /* UserDefaults */,
-			);
-			path = Persistence;
-			sourceTree = "<group>";
-		};
-		23ED6E9A1D38279400A5F2A2 /* UserDefaults */ = {
-			isa = PBXGroup;
-			children = (
-				23ED6E9B1D38279E00A5F2A2 /* UserDefaultsObservableSpec.swift */,
-			);
-			path = UserDefaults;
-			sourceTree = "<group>";
-		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -139,7 +120,6 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				23ED6E991D38279400A5F2A2 /* Persistence */,
 				23433B281D3646400018405C /* Networking */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -317,12 +297,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				236FE5E61D4913120071964D /* Oauth2HandlerSpec.swift in Sources */,
 				236FE5EB1D4913910071964D /* UrlRequestBuilderSpec.swift in Sources */,
 				236FE5DF1D4913090071964D /* JsonHttpClientSpec.swift in Sources */,
 				239364F31D4B6EDF00C3F5A6 /* SessionRepositorySpec.swift in Sources */,
 				236FE5E31D4913090071964D /* UrlRequestDispatcherSpec.swift in Sources */,
-				23ED6E9C1D38279E00A5F2A2 /* UserDefaultsObservableSpec.swift in Sources */,
 				236FE5E41D4913090071964D /* UrlRequestTypeSpec.swift in Sources */,
 				236FE5E01D4913090071964D /* UrlJsonResponseAdapterSpec.swift in Sources */,
 				236FE5DE1D4913090071964D /* HttpClientSpec.swift in Sources */,
