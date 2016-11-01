@@ -1,5 +1,9 @@
 ## Changelog
 
+### 1.0.5
+- Update the interface to be not reactive by default.
+- Remove persistence subspec.
+
 ### 1.0.4
 - Update RxSwift to 3.0.0 (official).
 
