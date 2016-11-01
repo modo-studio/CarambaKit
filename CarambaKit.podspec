@@ -25,11 +25,6 @@ Set of Core components, including Networking, Persistence and much more that are
     sp.dependency 'CarambaKit/Foundation'
     sp.dependency 'KeychainSwift', '~> 6.0'
     sp.source_files = 'CarambaKit/Classes/Networking/Base/**/*'
-
-    sp.subspec "Rx" do |spp|
-      spp.source_files = 'CarambaKit/Classes/Networking/Rx/**/*'
-      spp.dependency 'RxSwift', '~> 3.0.0'
-    end
   end
 
 end
