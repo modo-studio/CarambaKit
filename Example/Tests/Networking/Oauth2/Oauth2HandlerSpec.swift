@@ -2,7 +2,7 @@ import Foundation
 import Quick
 import Nimble
 import SwiftyJSON
-import RxSwift
+import Result
 
 @testable import CarambaKit
 
@@ -104,12 +104,13 @@ private class MockJsonHttpClient: JsonHttpClient {
         self.error = error
     }
     
-    fileprivate override func request(request: URLRequest) -> Observable<(JSON, URLResponse?)> {
+    fileprivate override func request(request: URLRequest, completion: @escaping (Result<JSON, NSError>) -> ()) {
         if let error = error {
-            return Observable.error(error)
+            completion(.failure(error as NSError))
         }
         else {
-            return Observable.just((self.response, nil))
+            completion(.success(response))
         }
     }
+
 }

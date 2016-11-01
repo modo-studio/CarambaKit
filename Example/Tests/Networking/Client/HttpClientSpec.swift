@@ -1,7 +1,7 @@
 import Foundation
 import Quick
 import Nimble
-import RxSwift
+import Result
 
 @testable import CarambaKit
 
@@ -14,15 +14,13 @@ class HttpClientSpec: QuickSpec {
         var responseAdapter: ResponseMockAdapter!
         var dispatcher: MockDispatcher!
         var subject: HttpClient<String>!
-        var observable: Observable<(String, URLResponse?)>!
         
         beforeEach {
             authenticatedRequest = URLRequest(url: URL(string: "https://authenticated")!)
             sessionAdapter = SessionMockAdapter(outputRequest: authenticatedRequest)
             responseAdapter = ResponseMockAdapter()
             dispatcher = MockDispatcher(response: (data: Data(), response: nil))
-            subject = HttpClient(responseAdapter: responseAdapter, requestDispatcher: dispatcher, sessionAdapter: sessionAdapter)
-            observable = subject.request(request: URLRequest(url: URL(string: "test://test")!))
+            subject = HttpClient(responseAdapter: responseAdapter, requestDispatcher: dispatcher)
         }
         
         describe("-request:") {
@@ -31,8 +29,8 @@ class HttpClientSpec: QuickSpec {
             }
             it("should adapt the response") {
                 waitUntil(action: { (done) in
-                    _ = observable.subscribe(onNext: { (input) in
-                        expect(input.0) == "works"
+                    subject.request(request: authenticatedRequest, completion: { (result) in
+                        expect(result.value) == "works"
                         done()
                     })
                 })
@@ -43,9 +41,7 @@ class HttpClientSpec: QuickSpec {
     
 }
 
-
 // MARK: - Mocks
-
 
 private class MockDispatcher: UrlRequestDispatcher {
     
@@ -57,9 +53,9 @@ private class MockDispatcher: UrlRequestDispatcher {
         self.response = response
     }
     
-    fileprivate override func dispatch(request: URLRequest) -> Observable<(data: Data?, response: URLResponse?)> {
+    fileprivate override func dispatch(request: URLRequest, completion: @escaping (Result<Data, NSError>) -> Void) {
         self.dispatchedRequest = request
-        return Observable.just(self.response)
+        completion(.success(self.response.data!))
     }
     
 }
@@ -78,8 +74,8 @@ private class SessionMockAdapter: Adapter<URLRequest, URLRequest> {
     
 }
 
-private class ResponseMockAdapter: Adapter<(data: Data?, response: URLResponse?), (String, URLResponse?)> {
-    fileprivate override func adapt(_ input: (data: Data?, response: URLResponse?)) -> (String, URLResponse?)! {
-        return ("works", input.response)
+private class ResponseMockAdapter: Adapter<Result<Data, NSError>, Result<String, NSError>> {
+    fileprivate override func adapt(_ input: Result<Data, NSError>) -> Result<String, NSError>! {
+        return .success("works")
     }
 }

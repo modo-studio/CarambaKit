@@ -17,20 +17,19 @@ Set of Core components, including Networking, Persistence and much more that are
 
   s.subspec "Foundation" do |sp|
     sp.source_files = 'CarambaKit/Classes/Foundation/**/*'
-    sp.dependency 'RxSwift', '~> 3.0.0'
-    sp.dependency 'RxCocoa', '~> 3.0.0'
+    sp.dependency "Result", "~> 3.0"
     sp.dependency 'SwiftyJSON', '~> 3.0'
   end
 
   s.subspec "Networking" do |sp|
     sp.dependency 'CarambaKit/Foundation'
     sp.dependency 'KeychainSwift', '~> 6.0'
-    sp.source_files = 'CarambaKit/Classes/Networking/**/*'
-  end
+    sp.source_files = 'CarambaKit/Classes/Networking/Base/**/*'
 
-  s.subspec "Persistence" do |sp|
-    sp.dependency 'CarambaKit/Foundation'
-    sp.source_files = 'CarambaKit/Classes/Persistence/**/*'
+    sp.subspec "Rx" do |spp|
+      spp.source_files = 'CarambaKit/Classes/Networking/Rx/**/*'
+      spp.dependency 'RxSwift', '~> 3.0.0'
+    end
   end
 
 end
