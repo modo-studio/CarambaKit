@@ -19,13 +19,17 @@ open class UrlRequestDispatcher {
 
     // MARK: - Public
 
-    public func dispatch(request: URLRequest, completion: @escaping (Result<Data, NSError>) -> Void) {
+    public func dispatch(request: URLRequest,
+                         completionQueue: DispatchQueue = DispatchQueue.main,
+                         completion: @escaping (Result<Data, NSError>) -> Void) {
         let session = URLSession(configuration: self.configuration)
         let dataTask = session.dataTask(with: request, completionHandler: { (data, response, error) in
-            if let error = error {
-                completion(.failure(error as NSError))
-            } else if let data = data {
-                completion(.success(data))
+            completionQueue.async {
+                if let error = error {
+                    completion(.failure(error as NSError))
+                } else if let data = data {
+                    completion(.success(data))
+                }
             }
         })
         dataTask.resume()

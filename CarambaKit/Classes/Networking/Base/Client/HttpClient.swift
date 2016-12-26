@@ -21,10 +21,13 @@ open class HttpClient<T> {
 
     // MARK: - Init
 
-    open func request(request: URLRequest, completion: @escaping (Result<T, NSError>) -> ()) {
+    open func request(request: URLRequest,
+                      completionQueue: DispatchQueue = DispatchQueue.main,
+                      completion: @escaping (Result<T, NSError>) -> ()) {
         let authenticatedRequest = self.sessionAdapter?.adapt(request) ?? request
-        self.requestDispatcher.dispatch(request: authenticatedRequest) { (result) in
-            completion(self.responseAdapter.adapt(result))
+        self.requestDispatcher.dispatch(request: authenticatedRequest,
+                                        completionQueue: completionQueue) { (result) in
+                                            completion(self.responseAdapter.adapt(result))
         }
     }
 

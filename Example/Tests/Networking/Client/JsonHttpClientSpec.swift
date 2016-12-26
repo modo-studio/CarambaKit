@@ -35,7 +35,9 @@ private class MockUrlRequestDispatcher: UrlRequestDispatcher {
     
     var dispatchedRequest: URLRequest!
     
-    fileprivate override func dispatch(request: URLRequest, completion: @escaping (Result<Data, NSError>) -> Void) {
+    fileprivate override func dispatch(request: URLRequest,
+                                        completionQueue: DispatchQueue = DispatchQueue.main,
+                                        completion: @escaping (Result<Data, NSError>) -> Void) {
         self.dispatchedRequest = request
     }
     
