@@ -24,7 +24,6 @@
 		236FE5D81D4913090071964D /* UrlJsonResponseAdapterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlJsonResponseAdapterSpec.swift; sourceTree = "<group>"; };
 		236FE5DB1D4913090071964D /* UrlRequestDispatcherSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlRequestDispatcherSpec.swift; sourceTree = "<group>"; };
 		236FE5DC1D4913090071964D /* UrlRequestTypeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlRequestTypeSpec.swift; sourceTree = "<group>"; };
-		236FE5E51D4913120071964D /* Oauth2HandlerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Oauth2HandlerSpec.swift; sourceTree = "<group>"; };
 		236FE5E81D4913910071964D /* UrlParameterEncodingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlParameterEncodingSpec.swift; sourceTree = "<group>"; };
 		236FE5E91D4913910071964D /* UrlRequestBuilderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlRequestBuilderSpec.swift; sourceTree = "<group>"; };
 		239364F21D4B6EDF00C3F5A6 /* SessionRepositorySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionRepositorySpec.swift; sourceTree = "<group>"; };
@@ -56,7 +55,6 @@
 				239364F11D4B6EDF00C3F5A6 /* Session */,
 				236FE5E71D4913910071964D /* RequestBuilder */,
 				236FE5D51D4913090071964D /* Client */,
-				236FE5DD1D4913090071964D /* Oauth2 */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -71,14 +69,6 @@
 				236FE5DC1D4913090071964D /* UrlRequestTypeSpec.swift */,
 			);
 			path = Client;
-			sourceTree = "<group>";
-		};
-		236FE5DD1D4913090071964D /* Oauth2 */ = {
-			isa = PBXGroup;
-			children = (
-				236FE5E51D4913120071964D /* Oauth2HandlerSpec.swift */,
-			);
-			path = Oauth2;
 			sourceTree = "<group>";
 		};
 		236FE5E71D4913910071964D /* RequestBuilder */ = {

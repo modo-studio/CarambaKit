@@ -77,9 +77,7 @@ public enum UrlParameterEncoding {
      - returns: A tuple containing the constructed request and the error that occurred during parameter encoding,
      if any.
      */
-    internal func encode(
-        URLRequest: NSURLRequest,
-        parameters: [String: AnyObject]?)
+    internal func encode(URLRequest: NSURLRequest, parameters: [String: AnyObject]?)
         -> (NSMutableURLRequest, NSError?)
     {
         var mutableURLRequest = URLRequest.mutableCopy() as! NSMutableURLRequest
