@@ -13,7 +13,7 @@ open class JsonHttpClient: HttpClient<JSON> {
     
     open override func request(request: URLRequest,
                                completionQueue: DispatchQueue = DispatchQueue.main,
-                               completion: @escaping (Result<JSON, NSError>) -> ()) {
+                               completion: @escaping (Result<(JSON, URLResponse), NSError>) -> ()) {
         return super.request(request: self.requestWithJSONHeaders(request: request),
                              completionQueue: completionQueue,
                              completion: completion)

@@ -19,7 +19,7 @@ class HttpClientSpec: QuickSpec {
             authenticatedRequest = URLRequest(url: URL(string: "https://authenticated")!)
             sessionAdapter = SessionMockAdapter(outputRequest: authenticatedRequest)
             responseAdapter = ResponseMockAdapter()
-            dispatcher = MockDispatcher(response: (data: Data(), response: nil))
+            dispatcher = MockDispatcher(response: (Data(), URLResponse(url: URL(string: "aga")!, mimeType: "", expectedContentLength: 3, textEncodingName: "33")))
             subject = HttpClient(responseAdapter: responseAdapter, requestDispatcher: dispatcher)
         }
         
@@ -30,7 +30,7 @@ class HttpClientSpec: QuickSpec {
             it("should adapt the response") {
                 waitUntil(action: { (done) in
                     subject.request(request: authenticatedRequest, completion: { (result) in
-                        expect(result.value) == "works"
+                        expect(result.value?.0) == "works"
                         done()
                     })
                 })
@@ -46,18 +46,19 @@ class HttpClientSpec: QuickSpec {
 private class MockDispatcher: UrlRequestDispatcher {
     
     var dispatchedRequest: URLRequest!
-    var response: (data: Data?, response: URLResponse?)
+    var response: (Data, URLResponse)
     
     
-    init(response: (data: Data?, response: URLResponse?)) {
+    init(response: (Data, URLResponse)) {
         self.response = response
     }
     
     fileprivate override func dispatch(request: URLRequest,
                                         completionQueue: DispatchQueue = DispatchQueue.main,
-                                        completion: @escaping (Result<Data, NSError>) -> Void) {
+                                        completion: @escaping (Result<(Data, URLResponse), NSError>) -> Void) {
         self.dispatchedRequest = request
-        completion(.success(self.response.data!))
+        let result: Result<(Data, URLResponse), NSError> = Result(self.response)
+        completion(result)
     }
     
 }
@@ -76,8 +77,9 @@ private class SessionMockAdapter: Adapter<URLRequest, URLRequest> {
     
 }
 
-private class ResponseMockAdapter: Adapter<Result<Data, NSError>, Result<String, NSError>> {
-    fileprivate override func adapt(_ input: Result<Data, NSError>) -> Result<String, NSError>! {
-        return .success("works")
+private class ResponseMockAdapter: Adapter<Result<(Data, URLResponse), NSError>, Result<(String, URLResponse), NSError>> {
+    fileprivate override func adapt(_ input: Result<(Data, URLResponse), NSError>) -> Result<(String, URLResponse), NSError>! {
+        let result: Result<(String, URLResponse), NSError> = Result(("works", input.value!.1))
+        return result
     }
 }

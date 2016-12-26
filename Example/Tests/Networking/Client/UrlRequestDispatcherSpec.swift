@@ -29,7 +29,7 @@ class UrlRequestDispatcherSpec: QuickSpec {
                     let request = URLRequest(url: NSURL(string: "test://test")! as URL)
                     waitUntil(action: { (done) in
                         subject.dispatch(request: request, completion: { (result) in
-                            if let error = result.error {
+                            if result.error != nil {
                                 done()
                             }
                         })
@@ -45,7 +45,7 @@ class UrlRequestDispatcherSpec: QuickSpec {
                     })
                     waitUntil(action: { (done) in
                         subject.dispatch(request: request, completion: { (result) in
-                            expect(result.value) == data
+                            expect(result.value?.0) == data
                             done()
                         })
                     })

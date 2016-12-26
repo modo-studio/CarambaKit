@@ -2,7 +2,7 @@ import Foundation
 import SwiftyJSON
 import Result
 
-open class UrlJsonResponseAdapter: Adapter<Result<Data, NSError>, Result<JSON, NSError>> {
+open class UrlJsonResponseAdapter: Adapter<Result<(Data, URLResponse), NSError>, Result<(JSON, URLResponse), NSError>> {
 
     // MARK: - Singleton
 
@@ -10,8 +10,8 @@ open class UrlJsonResponseAdapter: Adapter<Result<Data, NSError>, Result<JSON, N
 
     // MARK: - Public
 
-    open override func adapt(_ input: Result<Data, NSError>) -> Result<JSON, NSError>! {
-        return input.map({JSON(data: $0)})
+    open override func adapt(_ input: Result<(Data, URLResponse), NSError>) -> Result<(JSON, URLResponse), NSError>! {
+        return input.map({(JSON(data: $0.0), $0.1)})
     }
 
 }

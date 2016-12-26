@@ -43,7 +43,7 @@ public class Oauth2Handler {
         self.client.request(request: request) { response in
             if let value = response.value {
                 do {
-                    try self.delegate?.oauth2DidComplete(with: self.entity.sessionFromJSON(response: value))
+                    try self.delegate?.oauth2DidComplete(with: self.entity.sessionFromJSON(response: value.0))
                 } catch {
                     self.delegate?.oauth2DidFail(with: error)
                 }
