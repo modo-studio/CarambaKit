@@ -1,5 +1,3 @@
-require 'versionomy'
-
 COMMIT_MESSAGE = "Bump podspec to"
 
 lane :pods do
@@ -13,7 +11,6 @@ end
 lane :travis do
   pods
   tests
-  danger
 end
   
 lane :push do
