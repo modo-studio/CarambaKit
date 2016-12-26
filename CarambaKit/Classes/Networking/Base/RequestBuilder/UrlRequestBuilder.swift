@@ -50,14 +50,18 @@ public struct UrlRequestBuilder {
         return UrlRequestBuilder(baseUrl: self.baseUrl, type: self.type, path: self.path, parameters: self.parameters, body: body)
     }
 
-    public func build(parameterEncoding parameterEncoding: UrlParameterEncoding = UrlParameterEncoding.urlEncodedInURL,
-                      bodyEncoding: UrlParameterEncoding = UrlParameterEncoding.json) -> NSURLRequest {
-        let url = NSURL(string: self.baseUrl)!.appendingPathComponent(self.path)
-        let request = NSURLRequest(url: url!).mutableCopy() as! NSMutableURLRequest
+    public func build() -> NSURLRequest {
+        let url = NSURL(string: self.baseUrl)!.appendingPathComponent(self.path)!
+        var components = URLComponents(url: url, resolvingAgainstBaseURL: false)!
+        components.queryItems = self.parameters.flatMap({ (value) -> URLQueryItem? in
+            guard let stringValue = value.value as? CustomStringConvertible else { return nil }
+            return URLQueryItem(name: value.key, value: stringValue.description)
+        })
+        let request = NSURLRequest(url: components.url!).mutableCopy() as! NSMutableURLRequest
         request.httpMethod = self.type.description
-        let requestWithParameters = parameterEncoding.encode(URLRequest: request, parameters: self.parameters).0
-        let requestWithParametersAndBody = bodyEncoding.encode(URLRequest: requestWithParameters, parameters: self.body).0
-        return requestWithParametersAndBody
+        request.httpBody = try? JSONSerialization.data(withJSONObject: self.body,
+                                                       options: [])
+        return request.copy() as! NSURLRequest
     }
 
 }
