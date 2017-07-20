@@ -1,11 +1,11 @@
 PODS:
-  - CarambaKit (1.0.6):
-    - CarambaKit/Foundation (= 1.0.6)
-    - CarambaKit/Networking (= 1.0.6)
-  - CarambaKit/Foundation (1.0.6):
+  - CarambaKit (1.0.7):
+    - CarambaKit/Foundation (= 1.0.7)
+    - CarambaKit/Networking (= 1.0.7)
+  - CarambaKit/Foundation (1.0.7):
     - Result (~> 3.0)
     - SwiftyJSON (~> 3.0)
-  - CarambaKit/Networking (1.0.6):
+  - CarambaKit/Networking (1.0.7):
     - CarambaKit/Foundation
     - KeychainSwift (~> 6.0)
   - KeychainSwift (6.0.2)
@@ -42,7 +42,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CarambaKit: 7569eed1474743f7782896dfa8fdb5f1c9082574
+  CarambaKit: 6dd86befe8a8b3004a73d90b84afffa6be8493a9
   KeychainSwift: a261364334000afa8fab0894390d5d00dd226d4c
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   OHHTTPStubs: 3a42f25c00563b71355ac73112ba2324e9e6cef4
@@ -52,4 +52,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: cab1d6727e7424862f6454e3df079c1a6ee5a87e
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.1

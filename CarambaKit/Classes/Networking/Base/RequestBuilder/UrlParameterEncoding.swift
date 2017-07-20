@@ -77,9 +77,9 @@ public enum UrlParameterEncoding {
      - returns: A tuple containing the constructed request and the error that occurred during parameter encoding,
      if any.
      */
-    internal func encode(URLRequest: NSURLRequest, parameters: [String: AnyObject]?)
-        -> (NSMutableURLRequest, NSError?)
-    {
+    // swiftlint:disable:next function_body_length
+    internal func encode(URLRequest: NSURLRequest,
+                         parameters: [String: AnyObject]?) -> (NSMutableURLRequest, NSError?) {
         var mutableURLRequest = URLRequest.mutableCopy() as! NSMutableURLRequest
         
         guard let parameters = parameters else { return (mutableURLRequest, nil) }
@@ -118,8 +118,7 @@ public enum UrlParameterEncoding {
             if let method = Method(rawValue: mutableURLRequest.httpMethod) , encodesParametersInURL(method: method) {
                 if let
                     URLComponents = NSURLComponents(url: mutableURLRequest.url!, resolvingAgainstBaseURL: false)
-                    , !parameters.isEmpty
-                {
+                    , !parameters.isEmpty {
                     let percentEncodedQuery = (URLComponents.percentEncodedQuery.map { $0 + "&" } ?? "") + query(parameters: parameters)
                     URLComponents.percentEncodedQuery = percentEncodedQuery
                     mutableURLRequest.url = URLComponents.url

@@ -10,14 +10,12 @@ class HttpClientSpec: QuickSpec {
     override func spec() {
         
         var authenticatedRequest: URLRequest!
-        var sessionAdapter: SessionMockAdapter!
         var responseAdapter: ResponseMockAdapter!
         var dispatcher: MockDispatcher!
         var subject: HttpClient<String>!
         
         beforeEach {
             authenticatedRequest = URLRequest(url: URL(string: "https://authenticated")!)
-            sessionAdapter = SessionMockAdapter(outputRequest: authenticatedRequest)
             responseAdapter = ResponseMockAdapter()
             dispatcher = MockDispatcher(response: (Data(), URLResponse(url: URL(string: "aga")!, mimeType: "", expectedContentLength: 3, textEncodingName: "33")))
             subject = HttpClient(responseAdapter: responseAdapter, requestDispatcher: dispatcher)

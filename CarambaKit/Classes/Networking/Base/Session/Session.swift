@@ -16,7 +16,6 @@ public struct Session: Equatable {
 
 }
 
-
 public func == (lhs: Session, rhs: Session) -> Bool {
     return lhs.accessToken == rhs.accessToken &&
     lhs.refreshToken == rhs.refreshToken

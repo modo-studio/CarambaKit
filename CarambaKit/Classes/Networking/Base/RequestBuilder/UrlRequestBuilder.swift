@@ -42,11 +42,11 @@ public struct UrlRequestBuilder {
         return UrlRequestBuilder(baseUrl: self.baseUrl, type: .PUT, path: path, parameters: self.parameters, body: self.body)
     }
 
-    public func with(parameters parameters: [String: AnyObject]) -> UrlRequestBuilder {
+    public func with(parameters: [String: AnyObject]) -> UrlRequestBuilder {
         return UrlRequestBuilder(baseUrl: self.baseUrl, type: self.type, path: self.path, parameters: parameters, body: self.body)
     }
 
-    public func with(body body: [String: AnyObject]) -> UrlRequestBuilder {
+    public func with(body: [String: AnyObject]) -> UrlRequestBuilder {
         return UrlRequestBuilder(baseUrl: self.baseUrl, type: self.type, path: self.path, parameters: self.parameters, body: body)
     }
 
